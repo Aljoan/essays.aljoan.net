@@ -1,35 +1,30 @@
 
-/* Latin script articles: Spanish, French, etc. */
+/* Unified Multi-language CSS */
+
+/* Latin-based styles */
 .ensayo-latino {
-  font-family: "Georgia", serif;
-  font-size: 1.05rem;
-  line-height: 1.8;
+  direction: ltr;
   text-align: justify;
   text-indent: 1.5em;
-  margin: 1.2em auto;
-  max-width: 720px;
-  color: #2b2b2b;
+  font-family: 'Georgia', serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
   background-color: #fdfdfd;
+  color: #2b2b2b;
   padding: 1.5em;
-  border-left: 4px solid #d4aa00;
-  border-radius: 6px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+  border-radius: 0.4em;
 }
 
-/* Arabic script articles */
+/* Arabic-based styles */
 .maqala-arabiya {
-  font-family: "Amiri", "Scheherazade", serif;
-  font-size: 1.1rem;
-  line-height: 2;
   direction: rtl;
   text-align: justify;
-  text-indent: 1.5em;
-  margin: 1.2em auto;
-  max-width: 720px;
-  color: #2b2b2b;
-  background-color: #fcfcfa;
+  text-indent: 2em;
+  font-family: 'Amiri', 'Scheherazade', serif;
+  font-size: 1.2rem;
+  line-height: 2.0;
+  background-color: #fdf8f0;
+  color: #1e1e1e;
   padding: 1.5em;
-  border-right: 4px solid #007b7f;
-  border-radius: 6px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+  border-radius: 0.4em;
 }
