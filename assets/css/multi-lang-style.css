@@ -1,0 +1,35 @@
+
+/* Latin script articles: Spanish, French, etc. */
+.ensayo-latino {
+  font-family: "Georgia", serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  text-align: justify;
+  text-indent: 1.5em;
+  margin: 1.2em auto;
+  max-width: 720px;
+  color: #2b2b2b;
+  background-color: #fdfdfd;
+  padding: 1.5em;
+  border-left: 4px solid #d4aa00;
+  border-radius: 6px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Arabic script articles */
+.maqala-arabiya {
+  font-family: "Amiri", "Scheherazade", serif;
+  font-size: 1.1rem;
+  line-height: 2;
+  direction: rtl;
+  text-align: justify;
+  text-indent: 1.5em;
+  margin: 1.2em auto;
+  max-width: 720px;
+  color: #2b2b2b;
+  background-color: #fcfcfa;
+  padding: 1.5em;
+  border-right: 4px solid #007b7f;
+  border-radius: 6px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+}
