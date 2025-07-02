@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Techno Figures Collection-Spectral Authorities</title>
+  <link rel="stylesheet" href="techno_figures_collection.css">
+</head>
+<body>
+
+<h1>Spectral Authorities</h1>
+
+<div class="lang-switch">
+  <button onclick="switchLang('en')">English</button>
+  <button onclick="switchLang('fr')">Français</button>
+  <button onclick="switchLang('es')">Español</button>
+  <button onclick="switchLang('it')">Italiano</button>
+  <button onclick="switchLang('ar')">العربية</button>
+</div>
+
+<div class="intro">
+  <div class="lang-paragraph active" id="lang-ar" dir="rtl"><p>
+    الصفحة قيد الانشاء والتحديث<br>
+    وسوف نقوم باسكمال البيانات في أقرب فرصة<br>
+    ونشكركم لتفهمكم ولسعة صدركم
+    </p>
+    <p>
+    </p>
+  </div>
+  <div class="lang-paragraph " id="lang-en"><p>ُThis page is under construction<br>
+    We are in the process of "filling the gaps"<br>
+    Thank you for your understanding
+  </p></div>
+  <div class="lang-paragraph" id="lang-fr">
+    <p>Cette page est en cours de construction.<br>
+      Nous sommes en train de "combler le vide".<br>
+      Merci de votre compréhension.
+    </p>
+  </div>
+  <div class="lang-paragraph" id="lang-es">
+    <p>Esta página está en construcción.<br>
+      Estamos trabajando para “llenar el vacíos”.<br>
+      Gracias por su comprensión.
+    </p>
+  </div>
+  <div class="lang-paragraph" id="lang-it">
+    <p>Questa pagina è in costruzione.<br>
+      Stiamo lavorando per “colmare le lacune”.<br>
+      Grazie per la vostra comprensione.<br>
+
+    </p>
+</div>
+</div>
+
+<div class="container">
+  <img src="assets/IMG_2234.JPG" alt="Veiled Directive" width300>
+  <div class="title">Veiled Directive</div>
+  <div class="theme">Hidden Authority</div>
+  <div class="quote">“The most efficient commands are the ones never spoken.”</div>
+  <div class="tags"><strong>Tags:</strong> </div>
+  <div class="note"><strong>Note:</strong> </div>
+</div>
+
+<div class="container" >
+  <img src="assets/IMG_2271.JPG" alt="Binary Oracle" width="300">
+  <div class="title">Binary Oracle</div>
+  <div class="theme">Machine Divination</div>
+  <div class="quote">““We invented oracles, and now they interrogate us.””</div>
+  <div class="tags"><strong>Tags:</strong> machine</div>
+  <div class="note"><strong>Note:</strong> </div>
+</div>
+
+<div class="container">
+  <img src="assets/IMG_2286.JPG" alt="Spectral Bureaucrat" width="300">
+  <div class="title">Spectral Bureaucrat</div>
+  <div class="theme">Administrative Haunting</div>
+  <div class="quote">“Some officials are born invisible.”</div>
+  <div class="tags"><strong>Tags:</strong> </div>
+  <div class="note"><strong>Note:</strong> </div>
+</div>
+
+<div class="container">
+  <img src="assets/IMG_2290.JPG" alt="Surrealist Operator" width="300">
+  <div class="title">Surrealist Operator</div>
+  <div class="theme">Control and Play</div>
+  <div class="quote">“Every operator must smile at chaos.”</div>
+  <div class="tags"><strong>Tags:</strong> </div>
+  <div class="note"><strong>Note:</strong> </div>
+</div>
+
+<div class="container">
+  <img src="assets/IMG_2292.JPG" alt="Data Priest" width="300">
+  <div class="title">Data Priest</div>
+  <div class="theme">Ritual Intelligence</div>
+  <div class="quote">“Every sacred text becomes code if left alone long enough.”</div>
+  <div class="tags"><strong>Tags:</strong> </div>
+  <div class="note"><strong>Note:</strong> </div>
+</div>
+
+
+<script>
+  function switchLang(lang) {
+    document.querySelectorAll('.lang-paragraph').forEach(el => el.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+  }
+  </script>
+</body>
+</html>

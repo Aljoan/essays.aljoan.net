@@ -1,47 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Favicon definitions -->
+  <link rel="icon" type="image/x-icon" href="icons/favicon_256x256.ico" sizes="256x256">
+  <link rel="icon" type="image/x-icon" href="icons/favicon_64x64.ico" sizes="64x64">
+  <link rel="icon" type="image/x-icon" href="icons/favicon_32x32.ico" sizes="32x32">
+  <link rel="icon" type="image/x-icon" href="icons/favicon_16x16.ico" sizes="16x16">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Qais Aljoan – Digital Archive</title>
-  <link rel="stylesheet" href="assets/css/multi-lang-style.css">
-</head>
-<body style="background-color: #f1ebde;">
+  <meta property="og:image" content="https://essays.aljoan.net/images/silographia_profile_icon.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1080">
+  <meta property="og:image:height" content="1080">
 
-  <header style="text-align: center; margin-top: 2em;">
-    <h1 style="font-size: 2.4rem;">Qais Aljoan – Digital Archive</h1>
-    <p style="margin: 0 auto; max-width: 700px;" class="ensayo-latino">
-      Welcome to the personal and public <strong>creative</strong> archive of Qais Aljoan. This site contains multilingual essays, letters, meditations, and manuscripts across ethical, political, cultural, and literary registers.
+  <title>Qais Aljoan – Multilingual Archive</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f1ebde;
+      color: #333;
+      text-align: center;
+    }
+    header {
+      padding: 60px 20px 30px;
+    }
+    header h1 {
+      font-size: 2.6rem;
+      margin-bottom: 0.5em;
+    }
+    header p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    .language-selector {
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      background-color: #4a4a4a;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2f2f2f;
+    }
+    footer {
+      margin-top: 80px;
+      padding: 10px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Qais Aljoan – Multilingual Digital Archive</h1>
+    <p>
+      Welcome to the personal and public archive of Qais Aljoan. This site contains multilingual essays, meditations, and manuscripts across ethical, cultural, and literary domains.
+      Please select your preferred language to begin browsing the collection.
     </p>
   </header>
 
-  <main style="margin-top: 2em;">
-    <section class="ensayo-latino">
-      <h2 style="text-align: center;">List of Articles (English, French, Italian, Spanish)</h2>
-      <ul>
-        <li><a href="essays/index.html">Currencies of Control (EN)</a></li>
-        <li><a href="mujica/index.html">Mujica: Ethics in Practice</a></li>
-        <li><a href="Israeli_Strikes_on_Iran/Strategic_Risks_Endorsing_Strikes_Iran.pdf">Strategic Risks of Endorsing Israeli Strikes on Iran</a></li>
-        <li><a href="Israeli_Strikes_on_Iran/The%20G7%20and%20the%20Crisis%20of%20Western%20Legitimacy.pdf">The G7 and the Crisis of Western Legitimacy</a></li>
-      </ul>
-    </section>
+  <div class="language-selector">
+    <button onclick="chooseLanguage('ar')">العربية</button>
+    <button onclick="chooseLanguage('en')">English</button>
+    <button onclick="chooseLanguage('fr')">Français</button>
+    <button onclick="chooseLanguage('it')">Italiano</button>
+    <button onclick="chooseLanguage('es')">Español</button>
+  </div>
 
-    <section class="maqala-arabiya" style="margin-top: 3em;">
-      <h2 style="text-align: center;">قائمة المقالات</h2>
-      <ul>
-        <li><a href="Poems/Alissghaa_wa_Alathar.pdf">شعر - حين تسكن العبرة</a></li> 
-         <li><a href="Poems/Abrah.pdf">شعر - جدارية اﻹﺻﻐﺎء واﻷﺛﺮ </a></li> 
-        <li><a href="rasail/index.html">رسائل إلى الغائب</a></li>
-        <li><a href="triad/index.html">الصمت، الغموض، والصدق</a></li>
-        <li><a href="heritage/index.html">عبدالله الجوعان</a></li>
-        <li><a href="mithaq/index.html">ميثاق الضمير</a></li>
-      </ul>
-    </section>
-  </main>
+  <div class="language-selector">  <!--This is for the Art Gallery-->
+    <button onclick="chooseGallery()">The Art Gallery</button>
+  </div>
 
-  <footer style="text-align: left; margin-top: 3em; font-size: 0.9rem;">
-    <p>© 2025 Qais Aljoan. All rights reserved.</p>
+
+  <footer>
+    &copy; 2025 Qais Aljoan — All rights reserved.
   </footer>
+
+
+  <script>
+    function chooseGallery() {
+  
+      window.location.href = 'Art_Galleries/main_Art_Gallery-en.html';
+ 
+    }
+    
+  </script>
+
+  <script>
+    function chooseLanguage(lang) {
+      if (lang === 'ar') {
+        window.location.href = 'Literature/main-ar.html';
+      } else {
+        window.location.href = 'Literature/main-en.html';
+      }
+    }
+  </script>
 
 </body>
 </html>

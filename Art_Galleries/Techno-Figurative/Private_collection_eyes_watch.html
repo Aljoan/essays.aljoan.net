@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Techno Figures Collection</title>
+  <link rel="stylesheet" href="techno_figures_collection.css">
+</head>
+<body>
+
+<h1>Eyes That Watch</h1>
+
+<div class="lang-switch">
+  <button onclick="switchLang('en')">English</button>
+  <button onclick="switchLang('fr')">Français</button>
+  <button onclick="switchLang('es')">Español</button>
+  <button onclick="switchLang('it')">Italiano</button>
+  <button onclick="switchLang('ar')">العربية</button>
+</div>
+
+<div class="intro">
+  <div class="lang-paragraph active" id="lang-en"><p>[English poetic intro for Eyes That Watch]</p></div>
+  <div class="lang-paragraph" id="lang-fr"><p>[Intro poétique en français]</p></div>
+  <div class="lang-paragraph" id="lang-es"><p>[Introducción poética en español]</p></div>
+  <div class="lang-paragraph" id="lang-it"><p>[Prefazione poetica in italiano]</p></div>
+  <div class="lang-paragraph" id="lang-ar" dir="rtl"><p>[مقدمة تأملية باللغة العربية]</p></div>
+</div>
+
+<div class="card">
+  <img src="assets/IMG_2250.JPG" alt="Quiet Resonator">
+  <div class="title">Quiet Resonator</div>
+  <div class="theme">Mechanical Echo</div>
+  <div class="stars">★★★</div>
+  <div class="quote">““Not all frequencies are audible, but they still shape us.””</div>
+  <div class="tags"><strong>Tags:</strong> machine</div>
+  <div class="prompt"><strong>Prompt:</strong> abstract line-art, perceptive minimalism, theme: mechanical echo, ethical observation, digital sketch, silent witness aesthetic</div>
+</div>
+
+<div class="card">
+  <img src="assets/IMG_2275.JPG" alt="Orbital Mind">
+  <div class="title">Orbital Mind</div>
+  <div class="theme">Circular Logic</div>
+  <div class="stars">★★★★</div>
+  <div class="quote">““Not all orbits are chosen—some are inherited.””</div>
+  <div class="tags"><strong>Tags:</strong> </div>
+  <div class="prompt"><strong>Prompt:</strong> abstract line-art, perceptive minimalism, theme: circular logic, ethical observation, digital sketch, silent witness aesthetic</div>
+</div>
+
+<div class="card">
+  <img src="assets/IMG_2278.JPG" alt="Goggles of Perception">
+  <div class="title">Goggles of Perception</div>
+  <div class="theme">Enhanced Vision</div>
+  <div class="stars">★★★★</div>
+  <div class="quote">““What we amplify may replace what we understand.””</div>
+  <div class="tags"><strong>Tags:</strong> </div>
+  <div class="prompt"><strong>Prompt:</strong> abstract line-art, perceptive minimalism, theme: enhanced vision, ethical observation, digital sketch, silent witness aesthetic</div>
+</div>
+
+<div class="card">
+  <img src="assets/IMG_2279.JPG" alt="Subtle Interpreter">
+  <div class="title">Subtle Interpreter</div>
+  <div class="theme">Emotive Analysis</div>
+  <div class="stars">★★★★★</div>
+  <div class="quote">““The most dangerous equations are written in silence.””</div>
+  <div class="tags"><strong>Tags:</strong> </div>
+  <div class="prompt"><strong>Prompt:</strong> abstract line-art, perceptive minimalism, theme: emotive analysis, ethical observation, digital sketch, silent witness aesthetic</div>
+</div>
+
+<div class="card">
+  <img src="assets/IMG_2280.JPG" alt="Spiral Monitor">
+  <div class="title">Spiral Monitor</div>
+  <div class="theme">Surveillance Elegy</div>
+  <div class="stars">★★★★★</div>
+  <div class="quote">““We do not watch the machine—it watches us remembering.””</div>
+  <div class="tags"><strong>Tags:</strong> surveillance</div>
+  <div class="prompt"><strong>Prompt:</strong> abstract line-art, perceptive minimalism, theme: surveillance elegy, ethical observation, digital sketch, silent witness aesthetic</div>
+</div>
+
+<script>
+function switchLang(lang) {
+  document.querySelectorAll('.lang-paragraph').forEach(el => el.classList.remove('active'));
+  document.getElementById('lang-' + lang).classList.add('active');
+}
+</script>
+
+</body>
+</html>
+

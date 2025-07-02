@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Techno Figures Collection</title>
+  <link rel="stylesheet" href="techno_figures_collection.css">
+</head>
+<body>
+
+<h1>Echoes of the Inner</h1>
+
+<div class="lang-switch">
+  <button onclick="switchLang('en')">English</button>
+  <button onclick="switchLang('fr')">Français</button>
+  <button onclick="switchLang('es')">Español</button>
+  <button onclick="switchLang('it')">Italiano</button>
+  <button onclick="switchLang('ar')">العربية</button>
+</div>
+
+<div class="intro">
+  <div class="lang-paragraph active" id="lang-ar" dir="rtl"><p>في هذه المجموعة، لا تتكلّم الأشكال، بل تتذكّر.
+    أصداءٌ لا تشير إلى لحظة، بل إلى أثرٍ مُقيم، تتردّد فيها بلا بدايةٍ تُروى ولا نهايةٍ تُحتوى.
+    ذاكرة غير منطوقة، لا تُستدعى بالحدث، بل تتشكّل في الصدى.
+    كلّ خطّ فيها ظلّ لصوتٍ لم يُقال، وكلّ انحناءة أثرٌ لألمٍ لم يُشْهَد.
+    ليست لوحات تُرى، بل بُنى تستبطن الغياب، وتترجِم المسكوت عنه إلى أثرٍ بصريّ يتنفّس الصمت.
+    </p>
+  </div>
+  <div class="lang-paragraph " id="lang-en"><p>These figures do not speak outwardly. Their forms are marked by silence, delay, and return. They carry echoes of memory not as records, but as resonance: layered, inherited, and partially concealed. This is not nostalgia—it is architecture built from grief and transmission. Each line becomes an imprint of what the voice could not hold.</p></div>
+  <div class="lang-paragraph" id="lang-fr"><p>Ces figures ne parlent pas — elles résonnent. Elles habitent le silence comme une seconde peau, et leur présence est toujours en retrait. Ici, la mémoire n’est pas récit mais sédimentation : ce qui ne s’est pas dit mais qui s’est transmis. Ces corps tracés portent la trace de ce que le langage n’a pas su contenir.</p></div>
+  <div class="lang-paragraph" id="lang-es"><p>Aquí la figura no representa, recuerda. Los trazos, detenidos como en un soplo, no narran el pasado: lo contienen. La memoria no es archivo, es un eco mineral que se hereda en la forma. Lo no dicho, lo tembloroso, lo transmitido sin nombre — eso es lo que habita en estas líneas.</p></div>
+  <div class="lang-paragraph" id="lang-it"><p>Queste figure non parlano, ma ascoltano dal profondo. Ogni tratto è un’eco sedimentata, una memoria che non vuole essere spiegata, solo custodita. Non c’è nostalgia qui — solo la consapevolezza che il dolore può assumere geometria, e il silenzio, struttura.</p></div>
+</div>
+
+<div class="card">
+  <img src="assets/IMG_2244.JPG" alt="Nested Signal">
+  <div class="title">Nested Signal</div>
+  <div class="theme">Inner Architecture</div>
+  <div class="stars">★★★★★</div>
+  <div class="quote">““We dream in layers because our truth is always nested.””</div>
+  <div class="tags"><strong>Tags:</strong> </div>
+  <div class="prompt"><strong>Prompt:</strong> abstract line-art, expressive minimalism, theme: inner architecture, fusion of memory and silence, layered sketch composition</div>
+</div>
+
+<div class="card">
+  <img src="assets/IMG_2253.JPG" alt="Spiral Witness">
+  <div class="title">Spiral Witness</div>
+  <div class="theme">Testimony Loop</div>
+  <div class="stars">★★★★★</div>
+  <div class="quote">““Bearing witness is not linear—it spirals until it transforms.””</div>
+  <div class="tags"><strong>Tags:</strong> </div>
+  <div class="prompt"><strong>Prompt:</strong> abstract line-art, expressive minimalism, theme: testimony loop, fusion of memory and silence, layered sketch composition</div>
+</div>
+
+<div class="card">
+  <img src="assets/IMG_2262.JPG" alt="Shadow Glyph">
+  <div class="title">Shadow Glyph</div>
+  <div class="theme">Lost Language</div>
+  <div class="stars">★★★★</div>
+  <div class="quote">““Language decays when no one risks meaning.””</div>
+  <div class="tags"><strong>Tags:</strong> </div>
+  <div class="prompt"><strong>Prompt:</strong> abstract line-art, expressive minimalism, theme: lost language, fusion of memory and silence, layered sketch composition</div>
+</div>
+
+<div class="card">
+  <img src="assets/IMG_2288.JPG" alt="Observer of Void">
+  <div class="title">Observer of Void</div>
+  <div class="theme">Quantified Absence</div>
+  <div class="stars">★★★★★</div>
+  <div class="quote">““Emptiness has a shape we dare not name.””</div>
+  <div class="tags"><strong>Tags:</strong> </div>
+  <div class="prompt"><strong>Prompt:</strong> abstract line-art, expressive minimalism, theme: quantified absence, fusion of memory and silence, layered sketch composition</div>
+</div>
+
+<div class="card">
+  <img src="assets/IMG_2313.JPG" alt="Fragment Monk">
+  <div class="title">Fragment Monk</div>
+  <div class="theme">Silenced Vision</div>
+  <div class="stars">★★★★★</div>
+  <div class="quote">““What cannot be said becomes a face.””</div>
+  <div class="tags"><strong>Tags:</strong> </div>
+  <div class="prompt"><strong>Prompt:</strong> abstract line-art, expressive minimalism, theme: silenced vision, fusion of memory and silence, layered sketch composition</div>
+</div>
+
+<script>
+function switchLang(lang) {
+  document.querySelectorAll('.lang-paragraph').forEach(el => el.classList.remove('active'));
+  document.getElementById('lang-' + lang).classList.add('active');
+}
+</script>
+
+</body>
+</html>
+

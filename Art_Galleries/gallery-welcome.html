@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery Welcome</title>
+  <style>
+    body {
+      font-family: "Amiri", serif;
+      background-color: #fdfaf3;
+      color: #3d2b1f;
+      margin: 0;
+      padding: 2em;
+    }
+
+    .lang-switch {
+      display: flex;
+      justify-content: center;
+      gap: 1em;
+      margin-bottom: 2em;
+      flex-wrap: wrap;
+    }
+
+    .lang-switch button {
+      font-size: 1em;
+      padding: 0.5em 1.2em;
+      background-color: #e7ddc8;
+      color: #3d2b1f;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .lang-switch button:hover {
+      background-color: #d7c8b3;
+    }
+
+    .note-lang {
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.8;
+      display: none;
+    }
+
+    #note-ar {
+      direction: rtl;
+      font-size: 1.2em;
+    }
+
+    #note-en, #note-es, #note-fr, #note-it {
+      font-size: 1.05em;
+    }
+
+    h2 {
+      text-align: center;
+      color: #6c4e34;
+    }
+
+    em {
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="lang-switch">
+    <button onclick="switchNoteLang('ar')">العربية</button>
+    <button onclick="switchNoteLang('en')">English</button>
+    <button onclick="switchNoteLang('es')">Español</button>
+    <button onclick="switchNoteLang('fr')">Français</button>
+    <button onclick="switchNoteLang('it')">Italiano</button>
+  </div>
+
+  <div id="note-ar" class="note-lang">
+    <h2>مرحبًا بك في رُكن الفنّ البصري</h2>
+    <p>هذه الصفحة ليست معرضًا تقليديًا، بل مساحة استكشاف حر، يتقاطع فيها الصمت مع الصورة، ويتجاور فيها التجريد مع الذاكرة.</p>
+    <p>الأعمال المعروضة هنا لا تحاكي الواقع، بل تعبّر عنه من خلال الأثر والانطباع والتجريد. إنها محاولات بصرية لاستعادة الهامش، وإعادة تشكيل اللامرئي.</p>
+    <p>معظم هذه الأعمال ثنائية الأبعاد، وبعضها سيأخذ لاحقًا هيئة رقمية ثلاثية الأبعاد (ملفّات STL قابلة للطباعة)، لتصبح شكلاً محسوسًا يمكن طباعته ولمسه.</p>
+    <p>ستجد في هذا الرُكن مجموعات فنية مرتّبة حسب الموضوع أو الأسلوب، يتجاور فيها النصّ مع الخط، واللون مع الفراغ، بلغة تتجاوز الترجمة.</p>
+    <p>يمكنك اختيار إحدى المجموعات من القائمة الجانبية، أو البدء باستكشاف ما يلفت انتباهك دون ترتيب مسبق.</p>
+    <p><em>كل عمل هنا هو أثرٌ لما لم يُقَل، ورجفة لما لم يُشاهد.</em></p>
+  </div>
+
+  <div id="note-en" class="note-lang">
+    <h2>Welcome to the Visual Art Corner</h2>
+    <p>This is not a conventional gallery, but a contemplative space where silence meets form, and memory blends with abstraction.</p>
+    <p>The works here are non-mimetic — they do not depict reality but gesture toward it through impression, trace, and structure. They are visual attempts to reclaim the margins and reimagine the invisible.</p>
+    <p>Most are 2D creations, but some will later evolve into 3D digital formats (STL files ready for printing), offering tangible shapes for tactile experience.</p>
+    <p>You will find themed collections organized by motif or technique, where text and line, color and void, speak in a language beyond translation.</p>
+    <p>Choose a collection from the sidebar or begin exploring freely.</p>
+    <p><em>Each piece is a trace of the unsaid, a tremor of the unseen.</em></p>
+  </div>
+
+  <div id="note-es" class="note-lang">
+    <h2>Bienvenido al Rincón del Arte Visual</h2>
+    <p>Esta no es una galería convencional, sino un espacio de contemplación donde el silencio se encuentra con la forma y la memoria con la abstracción.</p>
+    <p>Las obras aquí no son miméticas: no representan la realidad, sino que la evocan mediante impresiones, rastros y estructuras. Son intentos visuales de recuperar los márgenes y reinventar lo invisible.</p>
+    <p>La mayoría son creaciones en 2D, aunque algunas se transformarán más adelante en archivos digitales 3D (archivos STL listos para imprimir) para una experiencia táctil.</p>
+    <p>Encontrarás colecciones temáticas organizadas por motivo o técnica, donde texto y línea, color y vacío, hablan un lenguaje que trasciende la traducción.</p>
+    <p>Elige una colección del menú lateral o empieza a explorar libremente.</p>
+    <p><em>Cada obra es una huella de lo no dicho, un estremecimiento de lo invisible.</em></p>
+  </div>
+
+  <div id="note-fr" class="note-lang">
+    <h2>Bienvenue dans l’Espace d’Art Visuel</h2>
+    <p>Ce n’est pas une galerie conventionnelle, mais un lieu de contemplation où le silence rejoint la forme, et la mémoire s’entrelace à l’abstraction.</p>
+    <p>Les œuvres ici ne sont pas mimétiques : elles ne représentent pas la réalité, mais l’évoquent par le biais de l’impression, de la trace et de la structure. Ce sont des tentatives visuelles pour récupérer les marges et réimaginer l’invisible.</p>
+    <p>La plupart sont des créations en 2D, certaines évolueront bientôt vers des formats numériques en 3D (fichiers STL imprimables), pour devenir formes tangibles et sensibles.</p>
+    <p>Les collections sont regroupées par thème ou technique, où texte et trait, couleur et vide parlent un langage au-delà de la traduction.</p>
+    <p>Choisissez une collection dans le menu latéral ou explorez librement.</p>
+    <p><em>Chaque œuvre est une trace de l’indicible, une vibration de l’invisible.</em></p>
+  </div>
+
+  <div id="note-it" class="note-lang">
+    <h2>Benvenuto nello Spazio di Arte Visiva</h2>
+    <p>Non si tratta di una galleria convenzionale, ma di uno spazio contemplativo dove il silenzio incontra la forma e la memoria si fonde con l’astrazione.</p>
+    <p>Le opere qui presenti non sono mimetiche: non raffigurano la realtà, ma la evocano attraverso impressioni, tracce e strutture. Sono tentativi visivi di recuperare i margini e immaginare l’invisibile.</p>
+    <p>La maggior parte sono creazioni bidimensionali, ma alcune si trasformeranno in file digitali 3D (file STL pronti per la stampa), diventando forme tangibili.</p>
+    <p>Troverai collezioni tematiche ordinate per stile o tecnica, dove testo e linea, colore e vuoto, parlano una lingua che va oltre la traduzione.</p>
+    <p>Scegli una collezione dal menu laterale o inizia l’esplorazione liberamente.</p>
+    <p><em>Ogni opera è una traccia del non detto, un fremito dell’invisibile.</em></p>
+  </div>
+
+  <script>
+    function switchNoteLang(lang) {
+      const all = document.querySelectorAll('.note-lang');
+      all.forEach(el => el.style.display = 'none');
+      const target = document.getElementById(`note-${lang}`);
+      if (target) target.style.display = 'block';
+    }
+    switchNoteLang('ar');
+  </script>
+
+</body>
+</html>

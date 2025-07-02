@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>قيس الجوعان – أرشيف المقالات</title>
+  <style>
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Amiri", serif;
+  background-color: #fdfaf3;
+  color: #333;
+}
+
+header {
+  background-color: #e5dbc8;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+main {
+  flex: 1;
+  padding: 0.1rem 0.2rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+nav {
+  width: 180px;
+  background-color: #f0e9d8;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+}
+
+nav h2 {
+  font-size: 18px;
+  margin-top: 0;
+}
+
+nav a {
+  display: block;
+  margin: 8px 0;
+  color: #003366;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #e5dbc8;
+  padding: 5px 10px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #444;
+  text-decoration: none;
+}
+ 
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>قيس الجوعان – أرشيف المقالات</h1>
+    <p>تصفح مقالات مختارة باللغة العربية.</p>
+  </header>
+
+  <div class="container">
+    <nav>
+      <h2>المقالات</h2>
+      <br>
+      
+      <a href="rithaa_salim_aladasani/rithaa_salim_aladasani.html" onclick="loadContent(this.href); return false;">رثاء نسيبي العزيز بو محمد</a>
+      <a href="rithaa_Osama/رثاء أخي العزيز أسامة.pdf" onclick="loadContent(this.href); return false;">رثاء أخي العزيز أسامة</a>
+      <a href="Poems/Alissghaa_wa_Alathar.pdf" onclick="loadContent(this.href); return false;">شعر - حين تسكن العبرة</a>
+      <a href="Poems/Abrah.pdf"  onclick="loadContent(this.href); return false;">شعر - جدارية الإصغاء والأثر</a>
+     
+      <div class="submenu-container">
+        <a href="rasail/intro.html" onclick="loadContent(this.href); toggleSubmenu(event); return false;">رسائل إلى الغائب ▾</a>
+        <div class="submenu" style="display: none; padding-right: 10px;">
+          <ul>
+            <li>
+              <a href="rasail/1- Letter-Lebanon.pdf" onclick="loadContent(this.href); return false;">لبنان (الحرب الأهلية)</a>
+            </li>
+            <li>
+              <a href="rasail/2-Sierra_Leone_Background.pdf" onclick="loadContent(this.href); return false;">خلفية موجزة عن الحرب الأهلية في سيراليون</a>
+            </li>
+            <li>
+              <a href="rasail/2- Letter-Sierra_Leone.pdf" onclick="loadContent(this.href); return false;">الرسالة من سيراليون</a>
+            </li>  
+        </ul>
+        </div>
+      </div>
+      <!--
+      <a href="triad/index.html" onclick="loadContent(this.href); return false;">الصمت، الغموض، والصدق</a>
+      <a href="heritage/index.html" onclick="loadContent(this.href); return false;">عبدالله الجوعان</a>
+      <a href="mithaq/index.html"  onclick="loadContent(this.href); return false;">ميثاق الضمير</a>
+      -->
+
+      <div class="submenu-container">
+        <a href="Trilogy_Expression/Trilogy_intro_AR.html" onclick="loadContent(this.href); toggleSubmenu(event); return false;">ثلاثيات التعبير ▾</a>
+        <div class="submenu" style="display: none; padding-right: 10px;">
+          <ul>
+            <li>
+              <a href="Trilogy_Expression/The_Silence_AR.pdf" onclick="loadContent(this.href); return false;">حين تكون القوة في "اللا - كلام "</a>
+            </li>
+            <li>
+              <a href="Trilogy_Expression/Diplo_Amiguity_AR.pdf" onclick="loadContent(this.href); return false;"> الغموض كأداة في الدبلوماسية الصغيرة</a>
+            </li>
+            <li>
+              <a href="Trilogy_Expression/Truth_Without_Collapse_AR.pdf" onclick="loadContent(this.href); return false;">هل يمكن قول الحقيقة دون الانهيار؟</a>
+            </li>  
+        </ul>
+        </div>
+      </div>
+        
+    </nav>
+
+    <main>
+      <main>
+        <iframe id="contentFrame" src="" style="width: 100%; height: 100vh; height: calc(85vh - 135px); border: none;"></iframe>
+         
+      </main>
+  </div>
+  <footer style="background-color: #e5dbc8; padding: 5px 10px; text-align: center; font-size: 0.9rem;">
+    <p>
+      <a href="../index.html" style="margin: 0 10px; color: #444; text-decoration: none;">↩ العودة إلى الصفحة الرئيسية</a> |
+      
+      <!--
+      <a href="about_author_AR.html" style="margin: 0 10px; color: #444; text-decoration: none;">عن الكاتب</a> |
+      <a href="about-site_AR.html" style="margin: 0 10px; color: #444; text-decoration: none;">حول الموقع</a>
+      -->
+    </p>
+    <p style="font-size: 0.8rem; color: #666; margin-top: 10px;">
+      © قيس عبدالله الجوعان – جميع الحقوق محفوظة، 2025
+    </p>
+  </footer>
+  
+  <script>
+    // Load default content into iframe when the page loads
+    window.onload = function() {
+      loadContent('welcome_AR.html'); // adjust the path if needed
+    };
+  </script>
+  
+<!--Script to toogle sub-menu-->
+  <script>
+    function toggleSubmenu(event) {
+      event.preventDefault();
+      const submenu = event.target.nextElementSibling;
+      submenu.style.display = submenu.style.display === "none" ? "block" : "none";
+    }
+
+<!--Script o load the contents in the main frame (contentFrame) -->
+  </script>
+
+  <script>
+    function loadContent(url) {
+      const frame = document.getElementById('contentFrame');
+      if (frame) {
+        frame.src = url;
+      }
+    }
+  </script>
+</body>
+</html>

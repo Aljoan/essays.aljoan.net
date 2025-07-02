@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Techno Figures Collection-Engineered Selves</title>
+  <link rel="stylesheet" href="techno_figures_collection.css">
+</head>
+<body>
+
+<h1>Engineered Selves</h1>
+
+<div class="lang-switch">
+  <button onclick="switchLang('en')">English</button>
+  <button onclick="switchLang('fr')">Français</button>
+  <button onclick="switchLang('es')">Español</button>
+  <button onclick="switchLang('it')">Italiano</button>
+  <button onclick="switchLang('ar')">العربية</button>
+</div>
+
+<div class="intro">
+  <div class="lang-paragraph active" id="lang-ar" dir="rtl"><p>
+    الصفحة قيد الانشاء والتحديث<br>
+    وسوف نقوم باسكمال البيانات في أقرب فرصة<br>
+    ونشكركم لتفهمكم ولسعة صدركم
+    </p>
+    <p>
+    </p>
+  </div>
+  <div class="lang-paragraph " id="lang-en"><p>ُThis page is under construction<br>
+    We are in the process of "filling the gaps"<br>
+    Thank you for your understanding
+  </p></div>
+  <div class="lang-paragraph" id="lang-fr">
+    <p>Cette page est en cours de construction.<br>
+      Nous sommes en train de "combler le vide".<br>
+      Merci de votre compréhension.
+    </p>
+  </div>
+  <div class="lang-paragraph" id="lang-es">
+    <p>Esta página está en construcción.<br>
+      Estamos trabajando para “llenar el vacíos”.<br>
+      Gracias por su comprensión.
+    </p>
+  </div>
+  <div class="lang-paragraph" id="lang-it">
+    <p>Questa pagina è in costruzione.<br>
+      Stiamo lavorando per “colmare le lacune”.<br>
+      Grazie per la vostra comprensione.<br>
+
+    </p>
+</div>
+</div>
+
+<div class="container">
+  <img src="assets/IMG_2277.JPG" alt="Synthetic Smile" width="300">
+  <div class="title">Synthetic Smile</div>
+  <div class="theme">Grotesque Animation</div>
+  <div class="quote">““We taught the mask to smile, and it never forgot.””</div>
+  <div class="tags"><strong>Tags:</strong> </div>
+  <div class="note"><strong>Note:</strong> </div>
+</div>
+
+<div class="container" >
+  <img src="assets/IMG_2281.JPG" alt="Wired Pupil" width="300">
+  <div class="title">Wired Pupil</div>
+  <div class="theme">Mechanized Curiosity</div>
+  <div class="quote">“Vision wired to function forgets to wonder.”</div>
+  <div class="tags"><strong>Tags:</strong> </div>
+  <div class="note"><strong>Note:</strong> </div>
+</div>
+
+<div class="container">
+  <img src="assets/IMG_2282.JPG" alt="Clothed in Symbols" width="300">
+  <div class="title">Clothed in Symbols</div>
+  <div class="theme">Glyphic Armor</div>
+  <div class="quote">“You wear what they cannot read.”</div>
+  <div class="tags"><strong>Tags:</strong> symbol</div>
+  <div class="note"><strong>Note:</strong> </div>
+</div>
+
+<div class="container">
+  <img src="assets/IMG_2291.JPG" alt="Prototype Mind" width="300">
+  <div class="title">Prototype Mind</div>
+  <div class="theme">Neural Engineering</div>
+  <div class="quote">“To build a mind is to design what resists you.”</div>
+  <div class="tags"><strong>Tags:</strong> </div>
+  <div class="note"><strong>Note:</strong> </div>
+</div>
+
+<script>
+  function switchLang(lang) {
+    document.querySelectorAll('.lang-paragraph').forEach(el => el.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Techno Figures Collection-Geometries of Thought</title>
+  <link rel="stylesheet" href="techno_figures_collection.css">
+</head>
+<body>
+
+<h1>Geometries of Thought</h1>
+
+<div class="lang-switch">
+  <button onclick="switchLang('en')">English</button>
+  <button onclick="switchLang('fr')">Français</button>
+  <button onclick="switchLang('es')">Español</button>
+  <button onclick="switchLang('it')">Italiano</button>
+  <button onclick="switchLang('ar')">العربية</button>
+</div>
+
+<div class="intro">
+  <div class="lang-paragraph active" id="lang-en"><p>[English poetic intro for Geometries of Thought]</p></div>
+  <div class="lang-paragraph" id="lang-fr"><p>[Intro poétique en français]</p></div>
+  <div class="lang-paragraph" id="lang-es"><p>[Introducción poética en español]</p></div>
+  <div class="lang-paragraph" id="lang-it"><p>[Prefazione poetica in italiano]</p></div>
+  <div class="lang-paragraph" id="lang-ar" dir="rtl"><p>[مقدمة تأملية باللغة العربية]</p></div>
+</div>
+
+<div class="card">
+  <img src="assets/IMG_2232.JPG" alt="Crossed Intent">
+  <div class="title">Crossed Intent</div>
+  <div class="theme">Ambiguous Agency</div>
+  <div class="stars">★★★</div>
+  <div class="quote">““What we do not resolve, we repeat—in sharper lines.””</div>
+  <div class="tags"><strong>Tags:</strong> </div>
+  <div class="prompt"><strong>Prompt:</strong> abstract line-art, intellectual minimalism, theme: ambiguous agency, cognitive geometry, conceptual sketch style</div>
+</div>
+
+<div class="card">
+  <img src="assets/IMG_2283.JPG" alt="Musical Cranium">
+  <div class="title">Musical Cranium</div>
+  <div class="theme">Abstract Harmony</div>
+  <div class="stars">★★★★★</div>
+  <div class="quote">““Thought is an architecture scored by tension.””</div>
+  <div class="tags"><strong>Tags:</strong> </div>
+  <div class="prompt"><strong>Prompt:</strong> abstract line-art, intellectual minimalism, theme: abstract harmony, cognitive geometry, conceptual sketch style</div>
+</div>
+
+<div class="card">
+  <img src="assets/IMG_2284.JPG" alt="Cosmic Draftsman">
+  <div class="title">Cosmic Draftsman</div>
+  <div class="theme">Cosmos Within</div>
+  <div class="stars">★★★★★</div>
+  <div class="quote">““To draw the universe is to confront your place in it.””</div>
+  <div class="tags"><strong>Tags:</strong> </div>
+  <div class="prompt"><strong>Prompt:</strong> abstract line-art, intellectual minimalism, theme: cosmos within, cognitive geometry, conceptual sketch style</div>
+</div>
+
+<div class="card">
+  <img src="assets/IMG_2289.JPG" alt="Orb-Harmonics">
+  <div class="title">Orb-Harmonics</div>
+  <div class="theme">Energetic Precision</div>
+  <div class="stars">★★★★★</div>
+  <div class="quote">““Harmony does not ask permission—it occurs.””</div>
+  <div class="tags"><strong>Tags:</strong> </div>
+  <div class="prompt"><strong>Prompt:</strong> abstract line-art, intellectual minimalism, theme: energetic precision, cognitive geometry, conceptual sketch style</div>
+</div>
+
+<div class="card">
+  <img src="assets/IMG_2314.JPG" alt="Polarity Model">
+  <div class="title">Polarity Model</div>
+  <div class="theme">Dualist Logic</div>
+  <div class="stars">★★★★</div>
+  <div class="quote">““Dualism is not conflict—it is tension unresolved.””</div>
+  <div class="tags"><strong>Tags:</strong> dualism</div>
+  <div class="prompt"><strong>Prompt:</strong> abstract line-art, intellectual minimalism, theme: dualist logic, cognitive geometry, conceptual sketch style</div>
+</div>
+
+<script>
+function switchLang(lang) {
+  document.querySelectorAll('.lang-paragraph').forEach(el => el.classList.remove('active'));
+  document.getElementById('lang-' + lang).classList.add('active');
+}
+</script>
+
+</body>
+</html>
+
