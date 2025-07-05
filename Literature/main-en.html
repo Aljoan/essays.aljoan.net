@@ -89,9 +89,42 @@
       color: #444;
       text-decoration: none;
     }
-  </style>
+    #menu-toggle {
+      border: 1px solid #ccc;
+      padding: 8px 16px;
+      margin: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      display: none;
+      background-color: #eee;
+    }
+
+/* Show the button only on small screens */
+@media screen and (max-width: 768px) {
+  #menu-toggle {
+    display: block;
+  }
+}
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+  nav.visible {
+    display: block;
+  }
+
+  
+}
+
+</style>
 </head>
 <body>
+
+  <button id="menu-toggle" style="margin: 1rem; padding: 0.5rem 1rem; font-size: 1rem;">
+    ☰ Menu
+  </button>
+  
+
 
   <header>
     <h1>Qais Aljoan – Essays Archive</h1>
@@ -181,6 +214,16 @@
       }
     }
   </script>
+
+
+<script>
+  document.getElementById('menu-toggle').addEventListener('click', function () {
+    const nav = document.querySelector('nav');
+    nav.classList.toggle('visible');
+  });
+</script>
+
+
 
 </body>
 </html>
