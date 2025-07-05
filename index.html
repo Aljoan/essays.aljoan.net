@@ -1,113 +1,149 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Favicon definitions -->
-  <link rel="icon" type="image/x-icon" href="icons/favicon_256x256.ico" sizes="256x256">
-  <link rel="icon" type="image/x-icon" href="icons/favicon_64x64.ico" sizes="64x64">
-  <link rel="icon" type="image/x-icon" href="icons/favicon_32x32.ico" sizes="32x32">
-  <link rel="icon" type="image/x-icon" href="icons/favicon_16x16.ico" sizes="16x16">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta property="og:image" content="https://essays.aljoan.net/images/silographia_profile_icon.png">
-  <meta property="og:image:type" content="image/png">
-  <meta property="og:image:width" content="1080">
-  <meta property="og:image:height" content="1080">
-
-  <title>Qais Aljoan – Multilingual Archive</title>
+  <title>Welcome | Qais A. Aljoan</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f1ebde;
+      font-family: "Helvetica Neue", sans-serif;
+      background-color: #f8f8f8;
       color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: auto;
       text-align: center;
+      padding: 1rem;
     }
     header {
-      padding: 60px 20px 30px;
+      max-width: 900px;
+      margin-bottom: 2rem;
+      position: relative;
     }
-    header h1 {
-      font-size: 2.6rem;
-      margin-bottom: 0.5em;
+    .hero-image {
+      max-width: 80vw;
+      max-height: 40vh;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
     }
-    header p {
-      max-width: 700px;
+    .lang-section {
+      display: none;
+      transition: opacity 1s ease;
       margin: 0 auto;
-      font-size: 1.1rem;
+      max-width: 700px;
+      opacity: 0;
+    }
+    .lang-section.active {
+      opacity: 1;
+      display: block;
+    }
+    .lang-section[dir="rtl"] p {
+      text-align: right;
+    }
+    .lang-section[dir="ltr"] p {
+      text-align: left;
+    }
+    h1 {
+      font-size: clamp(1.4rem, 2.5vw, 2.2rem);
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: clamp(1rem, 2vw, 1.2rem);
       line-height: 1.6;
+      margin-bottom: 1.2rem;
     }
-    .language-selector {
-      margin-top: 50px;
+    .gallery-subtitle {
+      margin-top: 0.5rem;
+      font-style: italic;
+      font-size: 0.95rem;
+      color: #555;
+    }
+    .button-links {
       display: flex;
-      justify-content: center;
-      gap: 16px;
       flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.2rem;
+      margin-top: 2.5rem;
     }
-    button {
-      padding: 12px 24px;
-      font-size: 16px;
-      border: none;
-      border-radius: 4px;
-      background-color: #4a4a4a;
-      color: white;
-      cursor: pointer;
+    .button-links a {
+      padding: 0.7rem 1.4rem;
+      background-color: #222;
+      color: #fff;
+      border-radius: 6px;
+      font-size: 1rem;
+      text-decoration: none;
     }
-    button:hover {
-      background-color: #2f2f2f;
+    .button-links a:hover {
+      background-color: #555;
     }
     footer {
-      margin-top: 80px;
-      padding: 10px;
+      margin-top: 3rem;
       font-size: 0.9rem;
-      color: #777;
+      color: #888;
+    }
+    @media (max-width: 480px) {
+      .button-links {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
-<body>
 
+<body>
   <header>
-    <h1>Qais Aljoan – Multilingual Digital Archive</h1>
-    <p>
-      Welcome to the personal and public archive of Qais Aljoan. This site contains multilingual essays, meditations, and manuscripts across ethical, cultural, and literary domains.
-      Please select your preferred language to begin browsing the collection.
-    </p>
+    <img src="/media/allontanarsi-banner.gif" alt="Allontanarsi" class="hero-image" />
+    <div class="lang-section active" id="en" dir="ltr">
+      <h1>Between Silence and Form</h1>
+      <p>This site is a quiet space for exploration — where images speak when words falter, and poetry shelters memory.<br>Created by Qais A. Aljoan, it gathers essays, multilingual meditations, and visual works shaped by distance, longing, and ethical attention.</p>
+      <div class="gallery-subtitle">🎨 Enter the visual echo — where color remembers what words forgot.</div>
+    </div>
+    <div class="lang-section" id="ar" dir="rtl">
+      <h1>بين الصمت والشكل</h1>
+      <p>هذا الموقع مساحة هادئة للاستكشاف — حيث تتكلّم الصور حين تعجز الكلمات، وتؤوي القصائد الذاكرة.<br>أنشأه قيس عبد الله الجوعان، ويضم مقالات، وتأملات متعددة اللغات، وأعمالاً بصرية تشكّلت من البعد، والحنين، والإنصات الأخلاقي.</p>
+      <div class="gallery-subtitle">🎨 ادخل إلى صدى البصر — حيث تتذكّر الألوان ما نسيته الكلمات.</div>
+    </div>
+    <div class="lang-section" id="it" dir="ltr">
+      <h1>Tra il silenzio e la forma</h1>
+      <p>Questo sito è uno spazio silenzioso per l’esplorazione — dove le immagini parlano quando le parole esitano, e la poesia custodisce la memoria.<br>Creato da Qais A. Aljoan, raccoglie saggi, meditazioni multilingue e opere visive nate dalla distanza, dalla nostalgia e da un’attenzione etica.</p>
+      <div class="gallery-subtitle">🎨 Entra nell’eco visivo — dove il colore ricorda ciò che le parole hanno dimenticato.</div>
+    </div>
+    <div class="lang-section" id="fr" dir="ltr">
+      <h1>Entre le silence et la forme</h1>
+      <p>Ce site est un espace calme d’exploration — où les images parlent quand les mots vacillent, et où la poésie abrite la mémoire.<br>Créé par Qais A. Aljoan, il rassemble des essais, des méditations multilingues et des œuvres visuelles façonnées par l’éloignement, le désir et une attention éthique.</p>
+      <div class="gallery-subtitle">🎨 Entrez dans l’écho visuel — où la couleur se souvient de ce que les mots ont oublié.</div>
+    </div>
+    <div class="lang-section" id="es" dir="ltr">
+      <h1>Entre el silencio y la forma</h1>
+      <p>Este sitio es un espacio sereno de exploración — donde las imágenes hablan cuando las palabras titubean, y la poesía resguarda la memoria.<br>Creado por Qais A. Aljoan, reúne ensayos, meditaciones multilingües y obras visuales moldeadas por la distancia, la añoranza y una atención ética.</p>
+      <div class="gallery-subtitle">🎨 Entra en el eco visual — donde el color recuerda lo que las palabras olvidaron.</div>
+    </div>
   </header>
 
-  <div class="language-selector">
-    <button onclick="chooseLanguage('ar')">العربية</button>
-    <button onclick="chooseLanguage('en')">English</button>
-    <button onclick="chooseLanguage('fr')">Français</button>
-    <button onclick="chooseLanguage('it')">Italiano</button>
-    <button onclick="chooseLanguage('es')">Español</button>
+  <div class="button-links">
+    <a href="Literature/main-ar.html">🌍 أدخل إلى القسم العربي</a>
+    <a href="Literature/main-en.html">🌍 Enter the English & Latin section</a>
+    <a href="Art_Galleries/main_Art_Gallery-en.html">🎨 Visual Gallery</a>
   </div>
-
-  <div class="language-selector">  <!--This is for the Art Gallery-->
-    <button onclick="chooseGallery()">The Art Gallery</button>
-  </div>
-
 
   <footer>
-    &copy; 2025 Qais Aljoan — All rights reserved.
+    &copy; 2025 Qais A. Aljoan — All rights reserved.
   </footer>
 
-
   <script>
-    function chooseGallery() {
-  
-      window.location.href = 'Art_Galleries/main_Art_Gallery-en.html';
- 
-    }
-    
-  </script>
+    const sections = document.querySelectorAll('.lang-section');
+    let currentIndex = 0;
 
-  <script>
-    function chooseLanguage(lang) {
-      if (lang === 'ar') {
-        window.location.href = 'Literature/main-ar.html';
-      } else {
-        window.location.href = 'Literature/main-en.html';
-      }
-    }
+    setInterval(() => {
+      sections[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + 1) % sections.length;
+      sections[currentIndex].classList.add('active');
+    }, 7000); // change language every 7 seconds
   </script>
-
 </body>
 </html>
