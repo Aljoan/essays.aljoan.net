@@ -156,23 +156,24 @@
 
        
     </div>
-
 <script>
   function toggleExplanation() {
-    var explanation = document.getElementById("explanation");
-    var isHidden = window.getComputedStyle(explanation).display === "none";
+    const explanation = document.getElementById("explanation");
 
-    if (isHidden) {
-      explanation.style.display = "block";
-      // Wait a bit for rendering, then scroll into view
-      setTimeout(function () {
-        explanation.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 100);
-    } else {
+    if (explanation.style.display === "block") {
       explanation.style.display = "none";
+    } else {
+      explanation.style.display = "block";
+      
+      // Scroll slightly above the div (adjust offset if needed)
+      setTimeout(() => {
+        const offset = explanation.getBoundingClientRect().top + window.scrollY - 80;
+        window.scrollTo({ top: offset, behavior: "smooth" });
+      }, 150); // Delay ensures rendering happens
     }
   }
 </script>
+
 
 </body>
 </html>
