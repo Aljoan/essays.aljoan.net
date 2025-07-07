@@ -4,6 +4,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Flagship – Allontanarsi التواري | QAIS A. Aljoan</title>
 <style>
         body {
@@ -22,15 +23,20 @@
         .flex-columns {
             display: flex;
             justify-content: space-between;
-            gap: 2em;
+            gap: 1.5rem; /* Small gap between the two columns */
+            padding: 0 1rem; /* Small horizontal padding so they don’t touch the absolute edge */
         }
         .column {
-            flex: 1;
-        }
-        .center-img {
+            flex: 1; /*   */
             display: flex;
-            justify-content: center;
-            align-items: center;
+            flex-direction: column;
+        }
+        .image-column {
+          flex-direction: column;
+          justify-content: flex-start;  /* vertical alignment */
+          align-items: center;          /* horizontal centering */
+          flex: 0 0 auto;               /* prevents it from stretching */
+          display: flex;
         }
         img {
             max-width: 100%;
@@ -39,19 +45,92 @@
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
         blockquote {
-            background-color: #fffaf4;
-            padding: 1em;
-            border-left: 4px solid #c4a47c;
-            margin: 1em 0;
+            background-color: rgba(255, 250, 244 ,0.5);
+            padding: 0;
+            margin: 0;
+            border-left: none;
+            border-right: none;
         }
-        .rtl {
-            direction: rtl;
-            text-align: right;
+        /* Italian blockquote */
+        .column.wide blockquote {
+          padding-left: 1rem;
+          border-left: 4px solid #c4a47c;
         }
+
+        /* Arabic blockquote */
+        .column.rtl blockquote {
+          padding-right: 1rem;
+          border-right: 4px solid #c4a47c;
+          direction: rtl;
+          text-align: right;
+        }
+
+
         .languages {
             margin-top: 3em;
            
             
+        }
+
+        .toggle-link {
+          font-weight: bold;
+          font-size: 1.05em;
+          padding: 0.4em;
+          cursor: pointer;
+          display: inline-block;
+        }
+        .toggle-link::before {
+          display: inline-block;
+          margin-right: 0.3em;
+          transition: transform 0.2s ease;
+          content: "▶";
+        }
+
+        .toggle-link.expanded::before {
+          content: "▼";
+        }
+
+        @media (max-width: 768px) {
+          .toggle-link {
+            font-size: 1em;
+            display: block;
+            text-align: center;
+            margin: 0.5rem auto;
+          }
+          /*.flex-columns {
+            flex-direction: column;
+          }
+
+          .column, .column.wide, .column.rtl {
+            width: 100%;
+          }
+
+          .column.rtl {
+            text-align: right;
+          } */
+        }
+
+        .hero-wrapper {
+          background-image: url('IMG_7964_preview_watermarked.jpg');
+          background-repeat: no-repeat;
+          background-position: top center;
+          background-size: contain;       /* ajusta ancho, mantiene relación */
+          background-attachment: scroll;  /* evita problemas en móviles */
+          padding: 4rem 2rem;
+          z-index: 0;
+          position: relative;
+        }
+
+
+        .hero-overlay {
+          background-color: rgba(255, 255, 255, 0.); /* optional background for legibility */
+          padding: .2rem;
+          z-index: 2;
+          border-radius: 10px;
+          width: 100%;
+          max-width: 100%;
+          position: relative;
+          /*  backdrop-filter: blur(2px); /* opcional: efecto vidrio */
         }
     </style>
 <style>
@@ -78,16 +157,23 @@
   font-size: 1.15em;
   line-height: 1.8em;
 }
-</style></head>
+</style>
+</head>
 <body>
 <h1> Allontanarsi –  التواري</h1>
+<!--
+<details style="margin: 2em auto; max-width: 900px;">
 
+ <summary style="font-weight: bold; font-size: 1.1em;">
+    ▸ About this text – حول هذه الكلمات – À propos – Acerca del texto – Informazioni
+  </summary>
+-->
   <div class="lang-switch" style="margin: 1em 0; display: flex; justify-content: center; gap: 0.5em;">
     <button onclick="switchNoteLang('fr')">Français</button>
     <button onclick="switchNoteLang('es')">Español</button>
     <button onclick="switchNoteLang('en')">English</button>
     <button onclick="switchNoteLang('it')">Italiano</button>
-    <button onclick="switchNoteLang('ar')">العربية</button>
+    <button onclick="switchNoteLang('ar')">العربية</button> 
 </div>
 
 
@@ -135,13 +221,19 @@
     </p>
   </div>
 </div>
-
+<!-- 
+</details>
+-->
 <hr>
 
-<div class="flex-columns">
-<div class="column">
-<h2 style="margin-left: 0.2em;">Italiano</h2>
-<blockquote>
+<div class="hero-wrapper">
+  <a href="Allontanarsi/Allontanarsi.html" title="Go to full version" 
+     style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;"></a>
+  <div class="hero-overlay">
+    <div class="flex-columns">
+      <div class="column wide">
+        <!-- <h2 style="margin-left: 0.2rem;">Italiano</h2> -->
+          <blockquote>
             Non si avvicina.<br/>
             Non invoca.<br/>
             Cammina via, come chi ha già detto tutto —<br/>
@@ -154,14 +246,16 @@
             O soltanto quel momento esatto<br/>
             in cui qualcosa smette di appartenere al mondo.
         </blockquote>
-</div>
-<div class="column center-img">
-<img alt="Allontanarsi - QAIS A. Aljoan" src="IMG_7964_preview_watermarked.jpg"/>
-</div>
-<div class="column rtl">
-<h2 style="margin-right: 1.2em;">العربية</h2>
-<blockquote style="margin-right: 2em; padding: 1em; border-right: 4px solid #c4a47c; border-left: none; background-color: #fffaf4; direction: rtl;font-size: large; text-align: right;">
-                تولّتْ كأنْ لم تُنْجِبِ الأرضُ مثلَها<br/>
+      </div>
+      <!--
+      <div class="column image-column">
+      <img alt="Allontanarsi - Qais A. Aljoan" src="IMG_7964_preview_watermarked.jpg"/>
+      </div>
+      -->
+      <div class="column rtl">
+        <!-- <h2 style="margin-right: .2rem;">العربية</h2> -->
+          <blockquote style="margin-right: 0rem; padding: .1rem; border-right: 4px solid #c4a47c; border-left: none; background-color: rgba(255, 250, 244 ,0.5); direction: rtl;font-size: medium; text-align: right;">
+                تلاشت كأنْ لم تُنْجِبِ الأرضُ مثلَها<br/>
                 ولا سَمِعَ الأحياءُ همسَ انسحابِها<br/>
                 تخفّفَتِ الأكوانُ عنها إذا مشتْ<br/>
                 كأنّ الثرى ما عادَ يُبقي عُذابَها<br/><br/>
@@ -173,17 +267,16 @@
                 ولكن صدىً يمشي، ولا طيفَ غابَها<br/>
                 فهل هي من هذي الحياةِ؟ فإنّها<br/>
                 أتَتْ، ثمّ مرّت، دونَ سُخطٍ خِطابَها<br/>
-</blockquote>
-</div>
-</div>
+            </blockquote>
+        </div>
+    </div>
+  </div>
+<!-- This is for toggling Latin and Slavic blocks -->
 <p style="text-align: center; margin-top: 2em;">
-<a href="#" onclick="toggleLatin(); return false;" style="font-weight: bold; margin-right: 2em;">
-      ▼ English, Français, Español
-    </a>
-<a href="#" onclick="toggleSlavic(); return false;" style="font-weight: bold;">
-      ▶ український, на суржику, руccкий
-    </a>
+  <a href="#" class="toggle-link" id="latin-toggle" onclick="toggleSection('latin'); return false;">English, Français, Español</a>
+  <a href="#" class="toggle-link" id="slavic-toggle" onclick="toggleSection('slavic'); return false;">український, на суржику, руccкий</a>
 </p>
+
 <div id="latin-block" style="display: block;">
 <div class="languages">
 <h2 style="text-align: left; margin-left: 25%;">English</h2>
@@ -443,30 +536,17 @@
   });
   </script>
 
+<!-- Tooggle Latin and Slavic-->
 <script>
-    function toggleLatin() {
-      const el = document.getElementById('latin-block');
-      const link = event.target;
-      if (el.style.display === 'none') {
-        el.style.display = 'block';
-        link.textContent = '▼ Hide English, Français, Españols';
-      } else {
-        el.style.display = 'none';
-        link.textContent = '▶ View English, Français, Español';
-      }
-    }
+  function toggleSection(section) {
+    const block = document.getElementById(section + '-block');
+    const toggle = document.getElementById(section + '-toggle');
+    const isHidden = block.style.display === 'none';
   
-    function toggleSlavic() {
-      const el = document.getElementById('slavic-block');
-      const link = event.target;
-      if (el.style.display === 'none') {
-        el.style.display = 'block';
-        link.textContent = '▼ Hide український, на суржикуs, руccкий';
-      } else {
-        el.style.display = 'none';
-        link.textContent = '▶ View український, на суржику, руccкий';
-      }
-    }
+    block.style.display = isHidden ? 'block' : 'none';
+    toggle.classList.toggle('expanded', isHidden);
+  }
   </script>
+  
 </body>
 </html>

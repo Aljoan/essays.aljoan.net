@@ -16,6 +16,11 @@
       color: #333;
     }
 
+    .arrow {
+      font-size: 0.4em;
+      margin-left: 4px;
+    }
+
     header {
       background-color: #e5dbc8;
       padding: 20px;
@@ -89,6 +94,31 @@
       color: #444;
       text-decoration: none;
     }
+
+    #menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 1.4rem;
+  padding: 0.4rem;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  #menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+  }
+
+  nav.visible {
+    display: block;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -98,10 +128,11 @@
     <p style="text-align: center; font-size: 1.1em; margin-top: -0.5em;">
       <span dir="rtl" lang="ar">مجموعة مختارة من الأعمال الفنيّة بلغات متعددة — حوار بصري متجدد.</span>
       <br>
-      Curated art collections in multiple languages — discover the visual dialogue.<br>
-      
+      Curated art collections in multiple languages — discover the visual dialogue.<br> 
     </p>
-    
+    <p style="margin: 0.5rem auto; font-size: 0.8rem; text-align: left;">
+      <button id="menu-toggle">☰ Menu</button>
+    </p>
   </header>
 
   <div class="container">
@@ -120,7 +151,13 @@
       
 
       <div class="submenu-container">
-        <a href="../Art_Galleries/Techno-Figurative/Collections_Techno_F_Intro.html" onclick="loadContent(this.href); toggleSubmenu(event); return false;">Techno-Figurative ▾</a> <!-- put this if you link file: loadContent(this.href); -->
+        <a href="../Art_Galleries/Techno-Figurative/Collections_Techno_F_Intro.html"
+            class="has-submenu" 
+            onclick="loadContent(this.href); toggleSubmenu(event); return false;"
+            title="Techno-Figurative Collection">
+            Techno-Figurative <span class="arrow">▶</span>
+        </a> <!-- put this if you link file: loadContent(this.href); -->
+
         <div class="submenu" style="display: none; padding-right: 10px;">
           
           <p> Coming soon</p>
@@ -187,14 +224,45 @@
     };
   </script>
 
+  <!-- Menu list hide / unhide -->
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const nav = document.querySelector("nav");
+    document.addEventListener("DOMContentLoaded", function () {
+    
+    if (menuToggle && nav) {
+      menuToggle.addEventListener("click", function (event) {
+        event.stopPropagation();
+        nav.classList.toggle("visible");
+      });
+
+      const collapsibleLinks = nav.querySelectorAll("a");
+      collapsibleLinks.forEach(link => {
+        link.addEventListener("click", function () {
+          if (window.innerWidth <= 768) {
+            nav.classList.remove("visible");
+          }
+        });
+      });
+    }
+  });
+</script>
+
+
   <!-- Script to toggle sub-menu -->
   <script>
     function toggleSubmenu(event) {
       event.preventDefault();
-      const submenu = event.target.nextElementSibling;
-      submenu.style.display = submenu.style.display === "none" ? "block" : "none";
+      const link = event.target.closest('.has-submenu');
+      const submenu = link.nextElementSibling;
+      const arrow = link.querySelector('.arrow');
+  
+      const isVisible = submenu.style.display === "block";
+      submenu.style.display = isVisible ? "none" : "block";
+      if (arrow) arrow.textContent = isVisible ? "▶" : "▼";
     }
   </script>
+  
 
   <!-- Script to load content in iframe -->
   <script>
