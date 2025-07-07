@@ -157,16 +157,22 @@
        
     </div>
 
-    <script>
-        function toggleExplanation() {
-            var x = document.getElementById("explanation");
-            var currentDisplay = window.getComputedStyle(x).display;
-            if (currentDisplay === "none") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
-            }
-        }
-    </script>
+<script>
+  function toggleExplanation() {
+    var explanation = document.getElementById("explanation");
+    var isHidden = window.getComputedStyle(explanation).display === "none";
+
+    if (isHidden) {
+      explanation.style.display = "block";
+      // Wait a bit for rendering, then scroll into view
+      setTimeout(function () {
+        explanation.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 100);
+    } else {
+      explanation.style.display = "none";
+    }
+  }
+</script>
+
 </body>
 </html>
