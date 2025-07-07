@@ -22,6 +22,11 @@
       text-align: center;
     }
 
+    .arrow {
+    font-size: 0.4em;
+    margin-left: 4px;
+  }
+
     .container {
       flex: 1;
       display: flex;
@@ -90,46 +95,45 @@
       text-decoration: none;
     }
     #menu-toggle {
-      border: 1px solid #ccc;
-      padding: 8px 16px;
-      margin: 10px;
-      font-size: 1rem;
-      cursor: pointer;
       display: none;
-      background-color: #eee;
+      background: transparent;
+      border: none;
+      font-size: 1.4rem; 
+      padding: 0.4rem;
+      cursor: pointer;
+      margin-left: 10px ; 
     }
 
 /* Show the button only on small screens */
+
 @media screen and (max-width: 768px) {
-  #menu-toggle {
-    display: block;
-  }
-}
-@media (max-width: 768px) {
-  nav {
-    display: none;
-  }
-  nav.visible {
-    display: block;
-  }
+    #menu-toggle {
+      display: block;
+    }
 
+    nav {
+      display: none;
+    }
+
+    nav.visible {
+      display: block;
+    }
+  }
   
-}
-
 </style>
 </head>
 <body>
-
-  <button id="menu-toggle" style="margin: 1rem; padding: 0.5rem 1rem; font-size: 1rem;">
-    ☰ Menu
-  </button>
-  
 
 
   <header>
     <h1>Qais Aljoan – Essays Archive</h1>
     <p>Browse selected essays in English, French, Italian, and Spanish.</p>
+    <p style="margin: 0.5rem auto; font-size: 0.8rem;"> 
+      <button id="menu-toggle">☰ Menu</button>
+    </p>
   </header>
+
+
 
   <div class="container">
     <nav>
@@ -137,36 +141,70 @@
      
       <br>
       <h3>English</h3>
-      <a href="https://timeskuwait.com/dont-remember-me-remember-the-ideas/" onclick="loadContent(this.href); return false;">Read Mujica’s tribute article on The Times Kuwait </a>
+      <a href="https://timeskuwait.com/dont-remember-me-remember-the-ideas/" 
+          onclick="loadContent(this.href); return false;"
+          class="collapse-on-click"
+          title="External link to Article">
+          Read Mujica’s tribute article on The Times Kuwait
+      </a>
       
-      <a href="Israeli_Strikes_on_Iran/Strategic_Risks_Endorsing_Strikes_Iran.pdf" onclick="loadContent(this.href); return false;">Strategic Risks of Endorsing Israeli Strikes on Iran</a>
-      <a href="Israeli_Strikes_on_Iran/The%20G7%20and%20the%20Crisis%20of%20Western%20Legitimacy.pdf" onclick="loadContent(this.href); return false;">The G7 and the Crisis of Western Legitimacy</a>
+      <a href="Israeli_Strikes_on_Iran/Strategic_Risks_Endorsing_Strikes_Iran.pdf" 
+          onclick="loadContent(this.href); return false;"
+          class="collapse-on-click"
+          title="Download or view PDF on Israeli Strikes">
+          Strategic Risks of Endorsing Israeli Strikes on Iran
+      </a>
+      <a href="Israeli_Strikes_on_Iran/The%20G7%20and%20the%20Crisis%20of%20Western%20Legitimacy.pdf"
+          onclick="loadContent(this.href); return false;"
+          class="collapse-on-click"
+          title="Download or view PDF onThe G7 and the Crisis of Western Legitimacy">
+          The G7 and the Crisis of Western Legitimacy
+      </a>
       
       <div class="submenu-container">
-        <a href="EN_Currencies_of_Control/currencies_of_control_blurb.html" onclick="loadContent(this.href); toggleSubmenu(event); return false;">Currencies of Control ▾</a> <!-- put this if you link file: loadContent(this.href); -->
-        <div class="submenu" style="display: none; padding-right: 10px;">
-          <p> Comming soon</p>
-          <!-- 
+        <a href="EN_Currencies_of_Control/currencies_of_control_blurb.html" 
+            onclick="loadContent(this.href); toggleSubmenu(event); return false;"
+            class="has-submenu"
+            title="Currency of Control: Comming Soon">
+            Currencies of Control <span class="arrow">▶</span>
+        </a>
+        <!-- put this if you link file: loadContent(this.href); -->
+
+        <div class="submenu" style= "display: none; padding-right: 1rem;">
+          
+         
           <ul>
             <li>
-              <a href="EN_Currencies_of_Control/Foreword.pdf" onclick="loadContent(this.href); return false;">Foreword </a>
+              <a href="EN_Currencies_of_Control/Foreword.pdf" 
+                  onclick="loadContent(this.href); return false;"
+                  class="collapse-on-click"
+                  title="Download or view PDF Foreword">
+                  Foreword
+              </a>
             </li>
+          </ul>
+             <!-- 
             <li>
               <a href="French/Quand_une_phrase.pdf" onclick="loadContent(this.href); return false;">Quand une phrase déplace les lignese</a>
             </li>
             <li>
               <a href="../Art_Galleries/Techno-Figurative/Collections_index3.html" onclick="loadContent(this.href); return false;">Techno-Figurative</a>
             </li>
-          </ul>
-          -->
+            -->
         </div>
-
+        
+        <p style="margin-left: 1rem;"> More Comming soon</p>
         <hr>
         <h3>Español</h3>
         <p> En fase de elaboración</p>
         <hr>
         <h3>Français</h3>
-        <a href="French/Quand_une_phrase.pdf" onclick="loadContent(this.href); return false;">Quand une phrase déplace les lignese</a>
+        <a href="French/Quand_une_phrase.pdf" 
+            class="collapse-on-click"
+            onclick="loadContent(this.href);  return false;"
+            title="Quand une phrase déplace les lignes">
+            Quand une phrase déplace les lignes
+        </a>
         <hr>
         <!-- 
         <h3>Italiano</h3>
@@ -177,7 +215,7 @@
     </nav>
 
     <main>
-      <iframe id="contentFrame" src="" style="width: 100%; height: 100vh; height: calc(80vh - 135px); border: none;"></iframe>
+      <iframe id="contentFrame" src="" style="width: 100%; height: calc(80vh - 135px); border: none;"></iframe>
        
     </main>
   </div>
@@ -200,9 +238,40 @@
   <script>
     function toggleSubmenu(event) {
       event.preventDefault();
-      const submenu = event.target.nextElementSibling;
-      submenu.style.display = submenu.style.display === "none" ? "block" : "none";
+      const link = event.target.closest('.has-submenu');
+      const submenu = link.nextElementSibling;
+      const arrow = link.querySelector('.arrow');
+  
+      const isVisible = submenu.style.display === "block";
+      submenu.style.display = isVisible ? "none" : "block";
+      if (arrow) arrow.textContent = isVisible ? "▶" : "▼";
     }
+  </script>
+  
+
+  <!--Make the menu collapse automatically when any link is clicked -->
+  <!-- Erased, not working properly -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuToggle = document.getElementById("menu-toggle");
+      const nav = document.querySelector("nav");
+  
+      if (menuToggle && nav) {
+        menuToggle.addEventListener("click", function (event) {
+          event.stopPropagation();
+          nav.classList.toggle("visible");
+        });
+  
+        const collapsibleLinks = nav.querySelectorAll("a.collapse-on-click");
+        collapsibleLinks.forEach(link => {
+          link.addEventListener("click", function () {
+            if (window.innerWidth <= 768) {
+              nav.classList.remove("visible");
+            }
+          });
+        });
+      }
+    });
   </script>
 
   <!-- Script to load content in iframe -->
@@ -216,12 +285,7 @@
   </script>
 
 
-<script>
-  document.getElementById('menu-toggle').addEventListener('click', function () {
-    const nav = document.querySelector('nav');
-    nav.classList.toggle('visible');
-  });
-</script>
+
 
 
 

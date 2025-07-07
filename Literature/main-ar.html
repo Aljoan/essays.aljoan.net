@@ -71,6 +71,29 @@ footer a {
   text-decoration: none;
 }
  
+#menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 1.4rem;
+  padding: 0.4rem;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  #menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+  }
+
+  nav.visible {
+    display: block;
+  }
+}
   </style>
 </head>
 <body>
@@ -78,13 +101,16 @@ footer a {
   <header>
     <h1>قيس الجوعان – أرشيف المقالات</h1>
     <p>تصفح مقالات مختارة باللغة العربية.</p>
+    <p style="margin: 0.5rem auto; font-size: 0.8rem;">
+      <button id="menu-toggle">☰ القائمة</button>
+    </p>
   </header>
 
   <div class="container">
     <nav>
       <h2>المقالات</h2>
       <br>
-      
+      <a href="Khaliyn_Jafani/qasida_khaliyn_jafani.html" onclick="loadContent(this.href); return false;">قصيدة: بيني وبين خليٍّ جفاني</a>
       <a href="rithaa_salim_aladasani/rithaa_salim_aladasani.html" onclick="loadContent(this.href); return false;">رثاء نسيبي العزيز بو محمد</a>
       <a href="rithaa_Osama/رثاء أخي العزيز أسامة.pdf" onclick="loadContent(this.href); return false;">رثاء أخي العزيز أسامة</a>
       <a href="Poems/Alissghaa_wa_Alathar.pdf" onclick="loadContent(this.href); return false;">شعر - حين تسكن العبرة</a>
@@ -151,6 +177,31 @@ footer a {
     </p>
   </footer>
   
+  <!-- Collapse / expand menu list -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuToggle = document.getElementById("menu-toggle");
+      const nav = document.querySelector("nav");
+  
+      if (menuToggle && nav) {
+        menuToggle.addEventListener("click", function (event) {
+          event.stopPropagation();
+          nav.classList.toggle("visible");
+        });
+  
+        const collapsibleLinks = nav.querySelectorAll("a");
+        collapsibleLinks.forEach(link => {
+          link.addEventListener("click", function () {
+            if (window.innerWidth <= 768) {
+              nav.classList.remove("visible");
+            }
+          });
+        });
+      }
+    });
+  </script>
+  
+
   <script>
     // Load default content into iframe when the page loads
     window.onload = function() {
@@ -159,16 +210,25 @@ footer a {
   </script>
   
 <!--Script to toogle sub-menu-->
-  <script>
-    function toggleSubmenu(event) {
-      event.preventDefault();
-      const submenu = event.target.nextElementSibling;
-      submenu.style.display = submenu.style.display === "none" ? "block" : "none";
+<script>
+  function toggleSubmenu(event) {
+    event.preventDefault();
+    const link = event.target.closest('a');
+    const submenu = link.nextElementSibling;
+    const isVisible = submenu.style.display === "block";
+    submenu.style.display = isVisible ? "none" : "block";
+
+    // Optional: toggle arrow direction
+    if (link.textContent.includes('▾')) {
+      link.innerHTML = link.innerHTML.replace('▾', '▸');
+    } else {
+      link.innerHTML = link.innerHTML.replace('▸', '▾');
     }
+  }
+</script>
+
 
 <!--Script o load the contents in the main frame (contentFrame) -->
-  </script>
-
   <script>
     function loadContent(url) {
       const frame = document.getElementById('contentFrame');
