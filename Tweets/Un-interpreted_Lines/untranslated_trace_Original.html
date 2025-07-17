@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>La escritura que no se traduce | Silographia</title>
+<meta content="Versos en español y árabe que evocan el silencio de la memoria, inspirados en Allontanarsi. Una reflexión sobre el rastro que no se puede traducir." name="description"/>
+<meta content="Qais A. Aljoan" name="author"/>
+<style>
+    body {
+      font-family: 'Georgia', serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 2rem;
+      background-color: #fdfaf3;
+      color: #1a1a1a;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background-color: #e5dbc8;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+    header nav {
+      text-align: left;
+      padding: 0.2rem 1rem;
+      margin-bottom: 0.2rem;
+    }
+    header nav a {
+      color: #195b9d;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    body.light-mode header  {
+      background-color: #e5dbc8;
+      color: #1a1a1a;
+    }
+    body.dark-mode  header {
+      background-color: #222222;
+      color: #f1f1f1;
+    }
+
+    h1, h2 {
+      text-align: center;
+    }
+    nav {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    nav button {
+      background: transparent;
+      border: 1px solid #888;
+      color: inherit;
+      padding: 0.5rem 1rem;
+      margin: 0 0.25rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .lang {
+      display: none;
+    }
+    .lang.active {
+      display: block;
+    }
+    blockquote {
+      font-style: italic;
+      background: #f9f9f9;
+      border-left: 5px solid #ccc;
+      margin: 1em;
+      padding: 1em;
+    }
+    ul {
+      margin: 1.5em 2em;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+    time {
+      display: block;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  
+    body.light-mode {
+      background-color: #ffffff;
+      color: #1a1a1a;
+    }
+    body.dark-mode {
+      background-color: #222222;
+      color: #f1f1f1;
+    }
+
+  
+blockquote {
+  background-color: #f9f9f9;
+  padding: 1.5em;
+  margin: 1em 0;
+  font-style: italic;
+  border-left: 4px solid #ccc;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+body.light-mode blockquote {
+  color: #333333;
+  background-color: #f9f9f9;
+  border-left: 4px solid #ccc;
+}
+
+body.dark-mode blockquote {
+  color: #222222;
+  background-color: #ffffff;
+  border-left: 4px solid #999;
+}
+.author-signature {
+  font-style: italic;
+  margin-top: -1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* --- Firma del autor --- */
+@media (min-width: 768px) {
+  .author-signature {
+    text-align: right;
+    margin-right: 4vw;
+  }
+  header h1 {
+        font-size: 1rem;
+  }
+}
+
+/* --- Botones de idioma --- */
+@media (min-width: 768px) {
+  nav button {
+    font-size: 1.1rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+/* --- Bloques de cita (poesía) --- */
+@media (min-width: 768px) {
+  blockquote {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    padding: 2rem;
+    font-size: 1.1rem;
+  }
+}
+
+/* --- Contenedor general del cuerpo --- */
+@media (min-width: 768px) {
+  body {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+</style>
+</head>
+<body>
+  <header>
+    <h1>Qais Aljoan – Essays Archive</h1>
+    <br>
+    <p style="text-align: left;"><em>Contents</em></p>
+    <!--
+    <nav><a href="https://timeskuwait.com/dont-remember-me-remember-the-ideas/" target="_blank">Mujica’s Tribute Article – External link: opens in new tab</a></nav>
+    <nav><a href="English/En-Unaccountable-Acts/unaccountable_acts.html">Explore the full serie here ▶</a></nav>
+    <nav><a href="English/En-Currencies_of_Control/currencies_of_control_landing_page.html">Currencies of Control ▶</a></nav>
+    -->
+    <nav><a href="../../Literature/main-en.html">↩ Back to Home Page</a></nav>
+  </header>
+  <br>
+<nav>
+<button id="theme-toggle" onclick="toggleTheme()">🌓 Mode</button>
+<button onclick="setLang('en')">English</button>
+<button onclick="setLang('fr')">Français</button>
+<button onclick="setLang('es')">Español</button>
+<button onclick="setLang('it')">Italiano</button>
+<button onclick="setLang('ar')">العربية</button>
+</nav>
+<section class="lang" id="es">
+<h1>La escritura que no se traduce</h1>
+<h2>Reflexión sobre la memoria: entre el silencio y la caligrafía</h2>
+<p class="author-signature">Por: Qais  Aljoan</p>
+<time datetime="2025-07-17">Última actualización: 2025-07-17</time>
+<h2>Contexto</h2>
+<p>Estos versos nacieron en un momento de contemplación silenciosa tras ver una de las versiones del proyecto <em>Allontanarsi</em>. La imagen evocó una memoria dormida y tocó una herida profunda en el corazón árabe del autor.</p>
+<p>En ese instante, se despertaron añoranzas de una vida que alguna vez fue soñada: <strong>una vida digna y libre, sin odio étnico ni sectario</strong>. Sueños de juventud que creían en el despertar árabe, pero que se fueron desvaneciendo en una realidad decepcionante. Sin embargo, la esperanza <strong>se debilita, pero no se extingue</strong>.</p>
+<p>Desde ese lugar íntimo se escribieron estos versos, no para revivir la nostalgia, sino para registrar <strong>un estremecimiento emocional sin traducción</strong>; un silencio que aún no ha encontrado su voz.</p>
+<h2>Versos</h2>
+<blockquote>
+<p>No son los trazos quienes susurran los recuerdos,<br/>
+    sino un eco en el corazón que nunca se tradujo.<br/>
+    Como si las líneas fueran rocas que lloraron,<br/>
+    heredando  un dolor ahogado.</p>
+<p>Llevan la huella de un tiempo imperceptible,<br/>
+    y guardan sangre de antaño en su silencio.<br/>
+    Son trazos, sí, pero sin relato alguno,<br/>
+    solo un temblor mudo, nunca del todo desvelado.</p>
+</blockquote>
+<h2>Sentido general</h2>
+<p>El poema no trata la escritura como simple recuerdo, sino como <strong>una huella silenciosa cargada de tiempo</strong>. Las palabras no hablan directamente, son <em>ecos de una emoción sin lenguaje</em>. Las líneas manuscritas —frías como piedra— <strong>hablan a través del silencio</strong>, y llevan dentro un <em>dolor heredado, no pronunciado</em>.</p>
+<p>Lo escrito no cuenta una historia clara, sino que transmite <strong>un estremecimiento interior, sin voz ni origen definidos</strong>. Es una historia que <em>no se narra: se estremece</em>.</p>
+<h2>Glosario poético</h2>
+<ul>
+<li><strong>“No son los trazos quienes susurran los recuerdos”</strong>: La escritura no revive directamente la memoria, sino que la sugiere de forma velada.</li>
+<li><strong>“Un eco en el corazón que nunca se tradujo”</strong>: Una emoción profunda que nunca se expresó en palabras.</li>
+<li><strong>“Rocas que lloraron”</strong>: Metáfora visual para describir signos inmóviles que, sin voz, revelan lo oculto.</li>
+<li><strong>“ un dolor ahogado”</strong>: Dolor interior que no se expresa con palabras, sino que se hereda y se siente.</li>
+<li><strong>“Huella de un tiempo imperceptible”</strong>: Las marcas del pasado que no se ven, pero que habitan en lo escrito.</li>
+<li><strong>“Temblor mudo”</strong>: Una emoción intensa, invisible y sin lenguaje, parecida a un suspiro del alma.</li>
+</ul>
+</section>
+<section class="lang" dir="rtl" id="ar">
+<h1>الخطّ الذي لا يُترجم</h1>
+<h2>تأمل في أثر الذكرى، بين الصمت والكتابة</h2>
+<p class="author-signature" dir="rtl" style="text-align: right;">بقلم: قيس عبد الله الجوعان</p>
+
+<time datetime="2025-07-17">آخر تحديث: 2025-07-17</time>
+<h2>مقدمة السياق</h2>
+<p>قُدِّمت هذه الأبيات في لحظة تأمل صامتة، إثر مشاهدة إحدى نسخ <em>Allontanarsi</em>، حيث تفاعلت الصورة مع ذاكرة الشاعر وتلامست مع جرحٍ عميق في الوجدان العربي.</p>
+<p>في تلك اللحظة، تفجّرت شجون دفينة من حياةٍ كانت تُرتجى: <strong>حياة حرّة كريمة، خالية من البغضاء والكراهية العرقية والطائفية</strong> — أحلام طفولة فكرية كانت تؤمن بإمكانية النهوض، ثم ذوت شيئًا فشيئًا في واقعٍ خذلها. لكنها لم تمت، بل بقي الأمل فيها <strong>يخبو دون أن ينطفئ</strong>.</p>
+<p>من هذا الحيّز الداخلي كتبت هذه الأبيات، لا لتستعرض الحنين، بل لتسجّل <strong>ارتجافة شعورية عاجزة عن الترجمة</strong>، وصمتًا لم يجد منفذه إلى القول.</p>
+<h2>الأبيات</h2>
+<blockquote>
+<p>وليس خَطُّ اليدِ بالذِّكرِ ناطقًا،<br/>
+    ولكنْ صدىً في القلبِ لم يُتَرْجَمِ<br/>
+    كأنّ الرسومَ جلامدٌ قد تكلّمتْ،<br/>
+    تُوارِثُ صمتَ الحُزنِ دون تكلُّمِ<br/>
+    بها أثرُ الدهرِ الذي لا يُرى،<br/>
+    ويَسكنُ فيها ما تقادمَ من دمِ<br/>
+    سُطورٌ، ولكنْ ما بها من حكايةٍ،<br/>
+    سوى رجْفةٍ خرساءَ لم تُعلَمِ</p>
+</blockquote>
+<h2>المعنى الإجمالي</h2>
+<p>في هذه الأبيات، لا يُنظر إلى الكتابة اليدوية كوسيلة لحفظ الذكرى فحسب، بل كأثرٍ <strong>صامتٍ ومُثقل بالزمن</strong>. فالخط ليس شاهدًا ناطقًا، بل <em>صدى شعورٍ لم يجد لغته</em>. الرسوم — أي الخطوط والكتابات — هي كالصخور الصمّاء، لكنها <strong>تنطق بالصمت لا بالكلمات</strong>، وتحمل في طيّاتها <em>ألمًا موروثًا لا يُفصح عنه</em>.</p>
+<p>ما كُتب على الورق لا يروي حكايةً محددة، بل يبعث <strong>رجفةً خفيّة، خرساء، لم يُعرَف أصلها</strong> — وكأنّ الحكاية التي يُراد روايتها <em>لا تُروى، بل تُرتجف</em>.</p>
+<h2>شرح مفردات مختارة</h2>
+<ul>
+<li><strong>خَطُّ اليدِ بالذِّكرِ ناطقًا</strong>: الخطّ لا يتكلّم مباشرةً بالذكريات، بل يظلّ مواربًا، غير صريح في استدعاء المعاني.</li>
+<li><strong>صدىً في القلبِ لم يُتَرْجَمِ</strong>: شعور دفين لم يتحوّل إلى كلام، ظلّ مشحونًا في القلب دون أن يُعبّر عنه.</li>
+<li><strong>الرسومَ جلامدٌ قد تكلّمت</strong>: استعارة تجمع بين الصخر والكتابة، للإيحاء بجمود الشكل وسخونة الجوهر.</li>
+<li><strong>صمتَ الحزنِ</strong>: تعبير عن الحزن الذي <em>لا يُقال، بل يُعاش في الصمت</em>.</li>
+<li><strong>أثرُ الدهرِ</strong>: آثار الزمن التي لا تُرى بالعين، ولكنها تُحَسّ في ملامح ما كُتب.</li>
+<li><strong>رجفةٍ خرساء</strong>: انفعال داخلي صامت، بلا صوت ولا تفسير.</li>
+</ul>
+</section>
+<section class="lang" dir="ltr" id="it">
+<h1>Il tratto che non si traduce</h1>
+<h2>Riflessione sulla memoria: tra il silenzio e la scrittura</h2>
+<p class="author-signature">Di: Qais  Aljoan</p>
+<time datetime="2025-07-17">Ultimo aggiornamento: 2025-07-17</time>
+<h2>Contesto</h2>
+<p>Questi versi sono nati in un momento di contemplazione silenziosa, dopo aver visto una delle versioni in lavorazione del progetto <em>Allontanarsi</em>. L’immagine ha risvegliato una memoria sopita e ha toccato una ferita profonda nel cuore arabo dell’autore.</p>
+<p>In quell’istante, sono riaffiorate nostalgie di una vita che un tempo si sognava possibile: <strong>una vita degna e libera, priva di odio etnico o settario</strong>. Sogni giovanili che credevano nel risveglio arabo, ma che si sono via via dissolti in una realtà deludente. Tuttavia, <strong>la speranza si affievolisce, ma non si spegne</strong>.</p>
+<p>Da quello spazio intimo sono nati questi versi — <strong>non per ravvivare la nostalgia, ma per registrare un fremito emotivo non ancora tradotto</strong>; un silenzio che cerca ancora la propria voce.</p>
+<h2>Versi</h2>
+<blockquote>
+<p>Non sono i tratti a sussurrare i ricordi,<br/>
+    ma un’eco nel cuore che mai fu tradotta.<br/>
+    Come se le linee fossero rocce che piansero,<br/>
+    ereditando il dolore affogato.</p>
+<p>Portano l’impronta di un tempo impercettibile,<br/>
+    e custodiscono sangue d’un tempo in quel silenzio.<br/>
+    Sono tratti, sì, ma privi di un racconto,<br/>
+    solo un fremito muto, mai del tutto compreso.</p>
+</blockquote>
+<h2>Senso generale</h2>
+<p>Il poema non tratta la scrittura come semplice custode della memoria, bensì come <strong>un’impronta silenziosa, colma del peso del tempo</strong>. Le parole non parlano direttamente: sono <em>echi di un’emozione senza linguaggio</em>. Le linee scritte a mano — fredde come pietra — <strong>parlano attraverso il silenzio</strong>, portando dentro di sé <em>un dolore ereditato e mai enunciato</em>.</p>
+<p>Ciò che è scritto non racconta una storia definita, ma trasmette <strong>un fremito interiore, privo di voce e origine riconoscibile</strong>. È una storia che <em>non si narra — si avverte</em>.</p>
+<h2>Glossario poetico</h2>
+<ul>
+<li><strong>“Non sono i tratti a sussurrare i ricordi”</strong>: La scrittura non riattiva la memoria in modo diretto, ma la evoca in modo velato.</li>
+<li><strong>“Un’eco nel cuore che mai fu tradotta”</strong>: Un’emozione profonda che non ha mai trovato espressione verbale.</li>
+<li><strong>“Rocce che piansero”</strong>: Metafora visiva che allude a segni fissi e immobili che, senza voce, rivelano l’occulto.</li>
+<li><strong>“Dolore affogato”</strong>: Sofferenza interiore non espressa a parole, ma trasmessa e sentita nel profondo.</li>
+<li><strong>“Impronta di un tempo impercettibile”</strong>: Le tracce del passato che non si vedono, ma abitano ciò che è scritto.</li>
+<li><strong>“Fremito muto”</strong>: Un’emozione intensa, invisibile, priva di linguaggio — simile a un sussulto dell’anima.</li>
+</ul>
+</section>
+<section class="lang" dir="ltr" id="fr">
+<h1>Le trait qui ne se traduit pas</h1>
+<h2>Réflexion sur la mémoire : entre silence et écriture</h2>
+<p class="author-signature">Par: Qais  Aljoan</p>
+<time datetime="2025-07-17">Dernière mise à jour : 2025-07-17</time>
+<h2>Contexte</h2>
+<p>Ces vers sont nés d’un moment de contemplation silencieuse, à la suite de la découverte d’une des versions en cours du projet <em>Allontanarsi</em>. L’image a réveillé une mémoire dormante et touché une blessure profonde dans le cœur arabe de l’auteur.</p>
+<p>À cet instant ont ressurgi les souvenirs d’une vie jadis rêvée : <strong>une vie digne et libre, sans haine ethnique ni sectaire</strong>. Des rêves de jeunesse qui croyaient à un éveil arabe, mais qui se sont lentement dissipés dans une réalité décevante. Pourtant, <strong>l’espérance s’affaiblit, mais ne s’éteint pas</strong>.</p>
+<p>C’est depuis cet espace intime que ces vers ont été écrits — <strong>non pour ranimer la nostalgie, mais pour enregistrer un frémissement émotionnel encore intraduit</strong> ; un silence qui cherche encore sa voix.</p>
+<h2>Vers</h2>
+<blockquote>
+<p>Ce ne sont pas les traits qui murmurent les souvenirs,<br/>
+    mais un écho dans le cœur jamais traduit.<br/>
+    Comme si les lignes étaient des roches en larmes,<br/>
+    héritant d’une douleur noyée sans parole.</p>
+<p>Elles portent l’empreinte d’un temps imperceptible,<br/>
+    et gardent un sang ancien dans leur silence.<br/>
+    Des traits, oui, mais sans aucun récit,<br/>
+    seulement un frisson muet, jamais, compris..</p>
+</blockquote>
+<h2>Sens général</h2>
+<p>Le poème ne traite pas l’écriture comme simple souvenir, mais comme <strong>une empreinte silencieuse chargée de temps</strong>. Les mots ne parlent pas directement ; ils sont <em>les échos d’une émotion sans langage</em>. Les lignes manuscrites — froides comme la pierre — <strong>parlent à travers le silence</strong>, portant en elles <em>une douleur héritée, jamais dite</em>.</p>
+<p>Ce qui est écrit ne raconte pas une histoire claire, mais transmet <strong>un frémissement intérieur, sans voix ni origine définissable</strong>. C’est une histoire qui <em>ne se raconte pas — elle se ressent</em>.</p>
+<h2>Glossaire poétique</h2>
+<ul>
+<li><strong>« Ce ne sont pas les traits qui murmurent les souvenirs »</strong> : L’écriture n’évoque pas la mémoire de manière directe, mais de manière voilée.</li>
+<li><strong>« Un écho dans le cœur jamais traduit »</strong> : Une émotion profonde jamais exprimée en mots.</li>
+<li><strong>« Roches en larmes »</strong> : Métaphore visuelle de signes immobiles qui, sans voix, révèlent l’invisible.</li>
+<li><strong>« Douleur muette »</strong> : Souffrance intérieure non exprimée, transmise dans le silence.</li>
+<li><strong>« Empreinte d’un temps imperceptible »</strong> : Traces du passé invisibles mais présentes dans l’écrit.</li>
+<li><strong>« Frisson muet »</strong> : Émotion intense, silencieuse, sans langage — semblable à un souffle de l’âme.</li>
+</ul>
+</section>
+<section class="lang active" dir="ltr" id="en">
+<h1>The Line That Doesn’t Translate</h1>
+<h2>A Reflection on Memory: Between Silence and Script</h2>
+<p class="author-signature">By: Qais  Aljoan</p>
+<time datetime="2025-07-17">Last updated: 2025-07-17</time>
+<h2>Context</h2>
+<p>These verses emerged in a moment of quiet contemplation, after viewing one of the evolving iterations of the <em>Allontanarsi</em> project. The image stirred a dormant memory and touched a wound long embedded in the author’s Arab sensibility.</p>
+<p>At that moment, a longing resurfaced — a longing for a life once imagined: <strong>a life of dignity and freedom, untouched by ethnic or sectarian hatred</strong>. Dreams born in youth, believing in an Arab awakening, gradually eroded in the face of a disillusioning reality. And yet, <strong>hope dims, but does not vanish</strong>.</p>
+<p>From this inner terrain, the verses were written — <strong>not to revive nostalgia, but to register an emotional tremor that had no language</strong>, a silence still seeking its voice.</p>
+<h2>Verses</h2>
+<blockquote>
+<p>Not the trace that whispers of memory,<br/>
+    but an echo in the heart — left unsaid.<br/>
+    As though the lines were stones that wept,<br/>
+    a sorrow drowned — inherited, wordless.</p>
+<p>The imprint of time unseen they carry,<br/>
+    and in silence, the blood of what once was.<br/>
+    Lines they are — and yet no tale they tell,<br/>
+    but a mute shiver, never wholly named.</p>
+</blockquote>
+<h2>General Meaning</h2>
+<p>This poem does not treat writing as mere memory-keeping, but rather as <strong>a silent imprint saturated with time</strong>. Words do not speak directly — they are <em>echoes of an emotion beyond speech</em>. The handwritten line, cold as stone, <strong>speaks through its silence</strong>, carrying within it <em>a sorrow inherited but never named</em>.</p>
+<p>What is written does not recount a clear story. It conveys <strong>an inner shiver — voiceless, originless, unresolved</strong>. This is a story <em>not narrated, but endured</em>.</p>
+<h2>Poetic Glossary</h2>
+<ul>
+<li><strong>“Not the trace that whispers of memory”</strong>: Writing doesn’t recall memory directly, but evokes it indirectly and silently.</li>
+<li><strong>“An echo in the heart — left unsaid”</strong>: A feeling that remained unexpressed, suspended in silence.</li>
+<li><strong>“Stones that wept”</strong>: A visual metaphor for silent signs bearing emotion without voice.</li>
+<li><strong>“A sorrow drowned — inherited, wordless”</strong>: Pain passed down across time, submerged in silence.</li>
+<li><strong>“Imprint of time unseen”</strong>: Invisible temporal residue carried in every trace.</li>
+<li><strong>“Mute shiver, never wholly named”</strong>: A deep, inexpressible emotion — not fully understood nor given form.</li>
+</ul>
+</section>
+
+
+<div class="footer">
+    Silographia | © Qais A.M.S. Aljoan – All rights reserved, 2025
+  </div>
+<script>
+    function setLang(lang) {
+      document.querySelectorAll('.lang').forEach(el => {
+        el.classList.remove('active');
+      });
+      document.getElementById(lang).classList.add('active');
+    }
+    window.onload = function () {
+      setLang('es');
+    };
+  </script>
+<script>
+    function toggleTheme() {
+      const body = document.body;
+      const toggle = document.getElementById('theme-toggle');
+
+      if (body.classList.contains('dark-mode')) {
+        body.classList.remove('dark-mode');
+        body.classList.add('light-mode');
+
+
+        toggle.textContent = '🌓 Mode';
+      } else {
+        body.classList.remove('light-mode');
+        body.classList.add('dark-mode');
+
+
+        
+        toggle.textContent = '🌓 Mode';
+      }
+    }
+
+    window.onload = function () {
+      const hour = new Date().getHours();
+      const body = document.body;
+      const toggle = document.getElementById('theme-toggle');
+
+      if (hour >= 6 && hour < 18) {
+        body.classList.add('light-mode');
+        toggle.textContent = '🌙 Dark';
+
+       
+        
+      } else {
+        body.classList.add('dark-mode');
+        toggle.textContent = '☀️ Light';
+        
+        
+
+      }
+    };
+  </script>
+</body>
+</html>
