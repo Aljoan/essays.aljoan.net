@@ -1,0 +1,82 @@
+
+body {
+    background-color: #fefcf8;
+    font-family: 'Amiri', serif;
+    color: #222;
+    padding: 2rem;
+    line-height: 2;
+    max-width: 800px;
+    margin: auto;
+    font-size: 1.125rem;
+}
+
+h2, h3 {
+    color: #444;
+    text-align: right;
+}
+
+.intro, .poem, .analysis, .vocab {
+    font-size: 1.125rem;
+    background-color: #fffefa;
+    border: 1px solid #ccc;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.poem-line {
+    margin: 0.2rem 0;
+    font-size: 1.125rem;
+    line-height: 2;
+}
+
+.explanation {
+    background-color: #f7f5f0;
+    border-right: 4px solid #ccc;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    color: #333;
+}
+
+ul {
+    list-style-type: square;
+    padding-right: 1.5rem;
+}
+
+.signature {
+    text-align: left;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+        font-size: 0.95rem;
+        line-height: 1.8;
+    }
+
+    .intro, .poem, .analysis, .vocab {
+        padding: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .signature {
+        font-size: 0.85rem;
+        text-align: center;
+    }
+
+    .poem-line {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+    ul {
+        padding-right: 1rem;
+    }
+
+    h2, h3 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}
