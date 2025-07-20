@@ -1,60 +1,89 @@
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+  <!-- ✅ Core Metadata -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Francesca Albanese: When Justice Speaks From Outside Its Tribe | Silographia</title>
-  <meta name="description" content="An in-depth reflection on Francesca Albanese’s UN report, confronting silence and complicity in Gaza through legal testimony. By Qais A. Aljoan." />
+
+  <!-- ✅ Page Title (Arabic version) -->
+  <title>فرانشيسكا ألبانيزي: عندما تنطق العدالة من غير أهلها</title>
+
+  <!-- ✅ SEO Metadata -->
+  <meta name="description" content="تحليل قانوني بقلم قيس الجوعان عن تقرير ألبانيزي حول غزة، وأهمية التوثيق القانوني ونداءٌ لدعم ترشيحها وفرق غزة الطبية لجائزة نوبل." />
   <meta name="author" content="Qais A. Aljoan" />
+  <meta name="keywords" content="غزة, حقوق الإنسان, فرانشيسكا ألبانيزي, الأمم المتحدة, نوبل للسلام, العدالة, صوت الضمير" />
+
+  <!-- ✅ Canonical: English is declared as the main version for indexing -->
+  <link rel="canonical" href="https://essays.aljoan.net/Literature/English/En-Unaccountable-Acts/albanese_article-En.html" />
+
+  <!-- ✅ Multilingual equivalents -->
+  <link rel="alternate" hreflang="ar" href="https://essays.aljoan.net/Literature/Arabic/Ar-Unaccountable-Acts/albanese_article-Ar.html" />
+  <link rel="alternate" hreflang="en" href="https://essays.aljoan.net/Literature/English/En-Unaccountable-Acts/albanese_article-En.html" />
+  <link rel="alternate" hreflang="x-default" href="https://essays.aljoan.net/Literature/English/En-Unaccountable-Acts/albanese_article-En.html" />
+
+  <!-- ✅ Icons and Favicons -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/silographia-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/silographia-32x32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/icons/silographia-48x48.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/icons/silographia-96x96.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/icons/silographia-192x192.png" />
+  <link rel="icon" type="image/png" sizes="256x256" href="/icons/silographia-256x256.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/silographia-180x180.png" />
+  <link rel="shortcut icon" href="/icons/silographia.ico" type="image/x-icon" />
+
+  <!-- ✅ Open Graph Metadata -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="غزة وصوت القانون والضمير | فرانشيسكا ألبانيزي" />
+  <meta property="og:description" content="تأملٌ في صمت السلطة، ونداءٌ لدعم ترشيح فرانشيسكا ألبانيزي وفرق غزة الطبية لجائزة نوبل للسلام." />
+  <meta property="og:url" content="https://essays.aljoan.net/Literature/Arabic/Ar-Unaccountable-Acts/albanese_article-Ar.html" />
+  <meta property="og:image" content="https://essays.aljoan.net/images/silographia_media_preview.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="ar_AR" />
+
+  <!-- ✅ Twitter Card Metadata -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@silographia" />
+  <meta name="twitter:creator" content="@silographia" />
+  <meta name="twitter:title" content="غزة وصوت القانون والضمير | فرانشيسكا ألبانيزي" />
+  <meta name="twitter:description" content="تأملٌ في صمت السلطة، ونداءٌ لدعم ترشيح فرانشيسكا ألبانيزي وفرق غزة الطبية لجائزة نوبل للسلام." />
+  <meta name="twitter:image" content="https://essays.aljoan.net/images/silographia_media_preview.jpg" />
+
+  <!-- ✅ Identity Links -->
+  <link rel="me" href="https://www.instagram.com/silographia/" />
+  <link rel="me" href="mailto:essays@aljoan.net" />
+
+  <!-- ✅ Include universal  external CSS file for Arabic RTL & Latin alphabetLTR -->
+  <!-- Primary stylesheet for website deployment -->
+  <link rel="stylesheet" href="/css/silographia_universal.css">
+
+  <!-- Fallback for local desktop usage (relative path) -->
+  <link rel="stylesheet" href="../../../css/silographia_universal.css">
+
+
+  <!-- ✅ Style tag begins -->
   <style>
-    body {
-      font-family: 'Georgia', serif;
-      line-height: 1.7;
-      margin: 0;
-      padding: 2rem;
-      background-color: #ffffff;
-      color: #1a1a1a;
-      transition: background-color 0.3s, color 0.3s;
-    }
-    h1, h2 {
-      text-align: center;
-    }
-    .meta {
-      text-align: center;
-      font-style: italic;
-      margin-bottom: 2rem;
-    }
-    .content {
-      max-width: 800px;
-      margin: auto;
-    }
-    a {
-      color: #0055aa;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .tags {
-      font-size: 0.9rem;
-      margin-top: 2rem;
-      color: #555;
-    }
-    .footer {
-      margin-top: 4rem;
-      text-align: center;
-      font-size: 0.85rem;
-      color: #888;
-    }
-    p {
-      text-align: justify;
-    }
+
   </style>
+  <script>
+    /* Toogle Light / Dark mode */
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+
+  </script>
 </head>
 <body>
+  <header class="site-header" style="margin-top: 0;">
+    <h5  style="margin-top: 0; margin-bottom: 0; padding-top: 0; padding-bottom: 0;">  <button class="light-dark-toggle" onclick="toggleDarkMode()">🌓</button><strong> Read the Arabic version here: </strong>
+      <a href="../../Arabic/Unaccountable-Acts-Ar/albanese_article-Ar.html" > رابط النسخة العربية </a>
+    </h5>
+  
+    <h1 style="margin-top: 0; margin-bottom: 0;">Francesca Albanese</h1>
+  </header>
   <div class="content">
-    <h1>Francesca Albanese: When Justice Speaks From Outside Its Tribe</h1>
+    <h2>When Justice Speaks From Outside Its Tribe</h2>
     <div class="meta">By Qais A. Aljoan — July 2025</div>
 
     <p style="padding-right: 3rem; text-align: right;">
@@ -94,7 +123,7 @@
     </div>
 
     <div class="footer">
-      Last updated: July 17, 2025<br />
+      Last updated: July 2025<br />
       © Qais A. Aljoan | essays.aljoan.net
     </div>
   </div>
