@@ -69,6 +69,16 @@ h1, h2, h3, h4, h5 {
   font-style: italic;
 }
 
+/* Used for general introductory content, including "Orichetto / introduction" blocks */
+.poemar {
+  margin-left: 20%;
+  margin-right: 20%;
+  max-width: 60%;
+  text-align: justify;
+  font-size: 1.2rem;
+}
+
+
 p {
   text-align: justify;
 }
