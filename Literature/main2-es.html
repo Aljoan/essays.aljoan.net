@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -28,19 +27,43 @@
     *{box-sizing:border-box}
     body{margin:0;font-family:Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;}
     h1,h2,h3{font-family:Georgia,serif;color:var(--accent2);}
-    header{position:sticky;top:0;background:#fff9;backdrop-filter:blur(6px);border-bottom:1px solid #0001;display:flex;justify-content:space-between;align-items:center;padding:.75rem 1rem;z-index:100;}
+
+    header{
+      position:sticky;top:0;background:#fff9;backdrop-filter:blur(6px);
+      border-bottom:1px solid #0001;display:flex;justify-content:space-between;
+      align-items:center;padding:.75rem 1rem;z-index:100;
+    }
     @media (prefers-color-scheme: dark){ header{ background:#14171ae6; border-color:#ffffff14; } }
     .brand{font-family:Georgia,serif;font-weight:700;font-size:1.1rem;display:flex;align-items:center;gap:.5rem;}
     .brand-dot{width:28px;height:28px;border-radius:6px;background:conic-gradient(from 200deg,var(--accent),var(--accent2));box-shadow:0 6px 16px rgba(0,0,0,.12);}
+
     .hero{padding:3rem 1rem;max-width:900px;margin:auto;text-align:center;}
     .hero p{margin:.5rem 0 0 0}
-    .cta{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:.9rem 1.4rem;border-radius:12px;font-weight:600;display:inline-block;margin-top:1rem;text-decoration:none;min-height:44px}
+
+    .cta{
+      background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;
+      padding:.9rem 1.4rem;border-radius:12px;font-weight:600;display:inline-block;
+      margin-top:1rem;text-decoration:none;min-height:44px
+    }
     .cta:focus{outline:2px solid #0005}
+
+    /* Carrusel */
     .peek{display:flex;gap:1rem;overflow-x:auto;padding:1rem;}
-    .peek-card{flex:0 0 80%;background:var(--card);border-radius:12px;padding:1rem;box-shadow:var(--shadow);text-align:left;border:1px solid #00000012;}
-    .peek-thumb{height:120px;border-radius:8px;background:linear-gradient(145deg,rgba(123,45,38,.2),rgba(23,74,99,.2));margin-bottom:.5rem;border:1px dashed #0000001a;}
+    .peek-card{
+      flex:0 0 min(90%, 420px); max-width:420px;
+      background:var(--card); border-radius:12px; padding:12px;
+      box-shadow:var(--shadow); text-align:left; border:1px solid #00000012;
+    }
+
+    /* Marco 16:9 para imágenes */
+    .media{ position:relative; width:100%; aspect-ratio:16/9; border-radius:12px; overflow:hidden; }
+    .media img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; }
+
     footer{text-align:center;padding:2rem 1rem;color:var(--muted);font-size:.9rem;}
-    .dock{position:sticky;bottom:0;background:#fff9;display:flex;justify-content:space-around;padding:.5rem 0;border-top:1px solid #0002;backdrop-filter:blur(6px)}
+    .dock{
+      position:sticky;bottom:0;background:#fff9;display:flex;justify-content:space-around;
+      padding:.5rem 0;border-top:1px solid #0002;backdrop-filter:blur(6px)
+    }
     @media (prefers-color-scheme: dark){ .dock{ background:#14171ae6; border-color:#ffffff14; } }
     .dock a{font-size:.85rem;color:var(--ink);text-decoration:none;min-height:44px;display:flex;align-items:center;}
   </style>
@@ -57,21 +80,31 @@
   <a id="explorar" href="/Literature/main-es.html" class="cta" aria-label="Entrar a la biblioteca principal en español">Entrar a la biblioteca (ES)</a>
 
   <div class="peek" aria-label="Adelantos de lectura">
+    <!-- Card 1 -->
     <div class="peek-card">
-    <img class="peek-thumb" src="/images/EU_Cautious_Europe.jpg" alt="Miniatura — Reconocimiento sin esencia">
-    <h3>Reconocimiento sin esencia:</h3>
-    <p>Por qué el “reconocimiento” sin garantías convierte el derecho en ceremonia.</p>
-    <a href="/Literature/English/EU-Selective-Enforcement/Editorial_Europa_Gaza_QaisAljoan_ES.html" aria-label="Leer ¿Cuándo mirará Europa la ley con ambos ojos?">Leer</a>
+      <div class="media">
+        <img src="/images/EU_Cautious_Europe.jpg" alt="Miniatura — Reconocimiento sin esencia" loading="lazy">
+      </div>
+      <h3>Reconocimiento sin esencia:</h3>
+      <p>Por qué el “reconocimiento” sin garantías convierte el derecho en ceremonia.</p>
+      <a href="/Literature/English/EU-Selective-Enforcement/Editorial_Europa_Gaza_QaisAljoan_ES.html" aria-label="Leer ¿Cuándo mirará Europa la ley con ambos ojos?">Leer</a>
     </div>
 
+    <!-- Card 2 -->
     <div class="peek-card">
-      <div class="peek-thumb" role="img" aria-label="Miniatura — Eurocide / North of Justice"></div>
+      <div class="media">
+        <img src="/images/Global_North_Asymetries-1200x675.jpg" alt="Miniatura — Eurocide / North of Justice" loading="lazy">
+      </div>
       <h3>Eurocide / North of Justice</h3>
       <p>Asimetrías morales y legalidad selectiva en el Norte Global.</p>
       <a href="/Literature/English/" aria-label="Leer Eurocide / North of Justice (EN)">Leer</a>
     </div>
+
+    <!-- Card 3 -->
     <div class="peek-card">
-      <div class="peek-thumb" role="img" aria-label="Miniatura — Convoyes bajo fuego"></div>
+      <div class="media">
+        <img src="/images/When_Occupation_Terrorize-02.jpg" alt="Miniatura — Convoyes bajo fuego" loading="lazy">
+      </div>
       <h3>Convoyes bajo fuego</h3>
       <p>De la evidencia dispersa a un dictamen consultivo de la CIJ.</p>
       <a href="/Literature/Spanish/" aria-label="Leer Convoyes bajo fuego">Leer</a>
@@ -88,6 +121,8 @@
   <a href="/about.html" aria-label="Ir a Sobre mí">Sobre mí</a>
 </nav>
 
-<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+<script>
+  document.getElementById('year').textContent=new Date().getFullYear();
+</script>
 </body>
 </html>
