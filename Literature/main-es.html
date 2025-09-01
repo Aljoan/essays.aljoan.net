@@ -1,85 +1,180 @@
 <!DOCTYPE html>
-<html lang="es" dir="ltr">
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Qais Aljoan – Archivo de ensayos</title>
-  <meta name="description" content="Explore una selección de ensayos en español, francés, inglés e italiano de Qais Aljoan. Reflexiones sobre diplomacia, ética, literatura y guerra.">
-  <meta name="keywords" content="Qais Aljoan, ensayos, literatura, diplomacia, poesía árabe, artículos multilingües, geopolítica">
-  <meta name="author" content="Qais A. Aljoan">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Silographia – Qais Aljoan | Ensayos y visuales</title>
+  <meta name="description" content="Silographia – Ensayos y visiones sobre justicia, exilio y memoria — en cinco lenguas. Acceso directo a la sección principal en español."/>
+  <meta name="author" content="Qais Aljoan"/>
+  <link rel="canonical" href="https://essays.aljoan.net/Literature/main-es.html"/>
+
+  <!-- OG/Twitter basic -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Silographia – Ensayos y visuales (ES)"/>
+  <meta property="og:description" content="Ensayos y visiones sobre justicia, exilio y memoria — en español. Entrada directa a la biblioteca principal."/>
+  <meta property="og:url" content="https://essays.aljoan.net/Literature/main-es.html"/>
+  <meta property="og:image" content="/assets/og-image.jpg"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+
   <style>
-    body {
-      font-family: 'Georgia', serif;
-      background-color: #fdfaf3;
-      color: #222;
-      margin: 0;
-      padding: 0;
+    /* --- MODO CLARO FORZADO (sin auto-oscuro) --- */
+    :root{
+      --bg:#e5dbc8; 
+      --ink:#1d1d1d; 
+      --accent:#7b2d26; 
+      --accent2:#174a63;
+      --muted:#6f6b63; 
+      --card:#e5dbc8; 
+      --shadow:0 10px 25px rgba(0,0,0,.08);
+      --glass:#ffffffee;              /* fondos translúcidos claros */
+      --glass-border:#00000018;
+      color-scheme: only light;       /* pista a los navegadores */
     }
-    header {
-      position: sticky;
-      top: 0;
-      background-color: #e5dbc8;
-      padding: 1rem;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      z-index: 1000;
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Roboto,Arial,sans-serif;
+      background:var(--bg);
+      color:var(--ink);
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
     }
-    header h1 {
-      margin: 0;
-      font-size: 1.1rem;
+    h1,h2,h3{font-family:Georgia,serif;color:var(--accent2);}
+
+    /* --- CABECERA (como la captura) --- */
+    header{
+      position:sticky;top:0;
+      background:var(--glass);
+      backdrop-filter:blur(6px);
+      border-bottom:1px solid var(--glass-border);
+      display:flex;justify-content:space-between;align-items:center;
+      padding:.75rem 1rem;z-index:100;
     }
-    header nav {
-      text-align: left;
-      padding: 0.2rem 1rem;
-      margin-bottom: 0.2rem;
+    .brand{
+      font-family:Georgia,serif;font-weight:700;font-size:1.1rem;
+      display:flex;align-items:center;gap:.5rem;
     }
-    header nav a {
-      color: #003366;
-      text-decoration: none;
-      font-size: 0.9rem;
+    .brand-dot{
+      width:28px;height:28px;border-radius:6px;
+      background:conic-gradient(from 200deg,var(--accent),var(--accent2));
+      box-shadow:0 6px 16px rgba(0,0,0,.12);
     }
-    main {
-      padding: 1.5rem;
-      line-height: 1.8;
-      max-width: 800px;
-      margin: auto;
+
+    .hero{padding:3rem 1rem;max-width:900px;margin:auto;text-align:center;}
+    .hero p{margin:.5rem 0 0 0}
+
+    .cta{
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      color:#fff;text-decoration:none;
+      padding:.9rem 1.4rem;border-radius:12px;font-weight:600;
+      display:inline-block;margin-top:1rem;min-height:44px
     }
-    h2 {
-      font-size: 1.2rem;
-      color: #333;
-      margin-top: 2rem;
+    .cta:focus{outline:2px solid #0005;outline-offset:2px}
+
+    /* --- Carrusel --- */
+    .peek{display:flex;gap:1rem;overflow-x:auto;padding:1rem;scroll-snap-type:x proximity;}
+    .peek-card{
+      flex:0 0 min(90%, 420px); max-width:420px;
+      background:var(--card); border-radius:12px; padding:12px;
+      box-shadow:var(--shadow); text-align:left; border:1px solid #00000012;
+      scroll-snap-align:start;
     }
-    @media (max-width: 768px) {
-      body {
-        font-size: 0.95rem;
-      }
-      header h1 {
-        font-size: 1rem;
-      }
+
+    /* Marco 16:9 para imágenes */
+    .media{ position:relative; width:100%; aspect-ratio:16/9; border-radius:12px; overflow:hidden; background:#fafafa; }
+    .media img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; }
+    /* Para logos: que no se recorten y respiren */
+    .media.logo img{ object-fit:contain; padding:10%; background:#fff; }
+
+    /* --- Pie (como la captura) --- */
+    footer{text-align:center;padding:2rem 1rem;color:var(--muted);font-size:.9rem;}
+
+    .dock{
+      position:sticky;bottom:0;
+      background:var(--glass);
+      backdrop-filter:blur(6px);
+      display:flex;justify-content:space-around;gap:.5rem;
+      padding:.5rem 0;border-top:1px solid var(--glass-border);
     }
+    .dock a{
+      font-size:.85rem;color:var(--ink);text-decoration:none;min-height:44px;
+      display:flex;align-items:center;padding:.25rem .5rem;border-radius:.5rem;
+    }
+    .dock a:focus{outline:2px solid #0005;outline-offset:2px}
   </style>
 </head>
 <body>
-  <header>
-    <h1>Qais Aljoan – Archivo de ensayos</h1>
-    <p><strong>Explore una selección de ensayos en español</strong></p>
-    <!--
-    <nav><a href="Spanish/Cuando_una_frase.pdf" target="_blank">Cuando una frase desplaza las líneas (se abrirá en una nueva pestaña)</a></nav>
-    -->
-    <nav><a href="../Literature/English/EU-Selective-Enforcement/Editorial_Europa_Gaza_QaisAljoan_ES.html"> ¿Cuándo mirará Europa la ley con ambos ojos?</a></nav>
-    <nav><a href="../Literature/Spanish/Global-North-Asymmetry/index.html"> La Asimetría del Norte Global</a></nav>
-    <nav><a href="../index.html">↩ Volver a la página principal</a></nav>
-  </header>
-  <main>
-    <p><em>Más artículos disponibles próximamente</em></p>
-  </main>
- <footer>
-  <p>
-    © 2025 Qais A. Aljoan — Todos los derechos reservados.
-    &nbsp;|&nbsp; <a href="/about.html">Sobre mí</a>
-    &nbsp;|&nbsp; <a href="/notes/privacy.html">Aviso de Privacidad</a>
-  </p>
-</footer>
+<header>
+<div class="brand">
+  <img src="/images/silographia_profile_icon_450.png" 
+       alt="Logo de Silographia" 
+       style="height:48px; width:auto; border-radius:2px; box-shadow:0 6px 6px rgba(0,0,0,.15);"/>
+  <span>Silographia – Qais Aljoan</span>
+</div>
+  <a href="#explorar" class="cta" aria-label="Bajar a la sección de exploración">Explorar</a>
+</header>
 
+<main class="hero" id="inicio">
+  <h1>Ensayos y visiones sobre justicia, exilio y memoria</h1>
+  <p>Biblioteca principal en español. Lecturas breves y ensayos de fondo sobre ética pública, derecho internacional y memoria; con enlaces a versiones en otras lenguas.</p>
+  <a id="explorar" href="/Literature/main-es.html" class="cta" aria-label="Publicaciones en español">Publicaciones en español</a>
+
+  <div class="peek" aria-label="Adelantos de lectura">
+    <!-- Card 1 (izquierda) — LOGO 
+    <div class="peek-card">
+      <div class="media logo">
+        <img src="/images/silographia_profile_icon_450.png" alt="Logo de Silographia" loading="lazy">
+      </div>
+      <h3>Silographia</h3>
+      <p>Biblioteca y archivo visual. Acceso a todas las publicaciones en español.</p>
+      <a href="/Literature/main-es.html" aria-label="Ir a la biblioteca en español">Entrar</a>
+    </div>
+    -->
+    <!-- Card 1 -->
+    <div class="peek-card">
+      <div class="media">
+        <img src="/images/EU_Cautious_Europe.jpg" alt="Miniatura — Reconocimiento sin esencia" loading="lazy">
+      </div>
+      <h3>Reconocimiento sin esencia:</h3>
+      <p>Por qué el “reconocimiento” sin garantías convierte el derecho en ceremonia.</p>
+      <a href="/Literature/English/EU-Selective-Enforcement/Editorial_Europa_Gaza_QaisAljoan_ES.html" aria-label="Leer ¿Cuándo mirará Europa la ley con ambos ojos?">Leer</a>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="peek-card">
+      <div class="media">
+        <img src="/images/Global_North_Asymetries-1200x675.jpg" alt="Miniatura — Eurocide / North of Justice" loading="lazy">
+      </div>
+      <h3>Eurocide / North of Justice</h3>
+      <p>Asimetrías morales y legalidad selectiva en el Norte Global.</p>
+      <a href="/Literature/Spanish/Global-North-Asymmetry/index.html" aria-label="Leer Eurocide / North of Justice (ES)">Leer</a>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="peek-card">
+      <div class="media">
+        <img src="/images/When_Occupation_Terrorize-02.png" alt="Miniatura — Convoyes bajo fuego" loading="lazy">
+      </div>
+      <h3>Convoyes bajo fuego</h3>
+      <p>De la evidencia dispersa a un dictamen consultivo de la CIJ.</p>
+      <a href="/Literature/Spanish/When-Occupation-Terrorize/index.html" aria-label="Leer Convoyes bajo fuego">Leer</a>
+    </div>
+  </div>
+</main>
+
+<footer>© <span id="year"></span> Silographia – Qais Aljoan</footer>
+
+<nav class="dock" role="navigation" aria-label="Navegación inferior">
+  <a href="../index.html" aria-label="Ir a la página principal">Ir al inicio</a>
+  <a href="../notes/privacy.html" aria-label="Aviso de Privacidad">Aviso de Privacidad</a>
+  <a href="../bio/bio.html" aria-label="Ir a Sobre mí">Sobre mí</a>
+</nav>
+
+<script>
+  // Año dinámico
+  document.getElementById('year').textContent=new Date().getFullYear();
+</script>
 </body>
 </html>
