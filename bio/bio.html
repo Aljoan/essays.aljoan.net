@@ -1,128 +1,202 @@
 <!DOCTYPE html>
-<!-- saved from url=(0059)file:///Users/q-aljoan/Downloads/silographia_bio%20(5).html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Qais Aljoan">
-  <meta name="description" content="Multilingual biography of Qais Aljoan — former professor, development advisor, and member of the advisory board at Reconnaissance Research. Presented in English, Arabic, Spanish, French, and Italian.">
-  <title>Qais Aljoan | Silographia | Multilingual Biography</title>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Silographia – Qais Aljoan | Multilingual Biography</title>
+  <meta name="description" content="Qais Aljoan (Silographia). Multilingual biography — Arabic, English, Spanish, French, Italian. Former professor and advisor in development; now writing and creating artworks that echo the inner geometry of thought and silence."/>
+  <meta name="author" content="Qais Aljoan"/>
+  <link rel="canonical" href="https://essays.aljoan.net/bio.html"/>
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Silographia – Qais Aljoan | Multilingual Biography"/>
+  <meta property="og:description" content="A journey from teaching and development advisory to multilingual writing and visual works. Read in Arabic, English, Spanish, French, and Italian."/>
+  <meta property="og:url" content="https://essays.aljoan.net/bio.html"/>
+  <!-- Replace this image path with a real asset on your site -->
+  <meta property="og:image" content="https://essays.aljoan.net/assets/og/bio.jpg"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Silographia – Qais Aljoan | Multilingual Biography"/>
+  <meta name="twitter:description" content="A journey from teaching and development advisory to multilingual writing and visual works. Read in Arabic, English, Spanish, French, and Italian."/>
+  <meta name="twitter:image" content="https://essays.aljoan.net/assets/og/bio.jpg"/>
+  <meta name="twitter:site" content="@Qais_Aljoan"/>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Qais Aljoan",
+    "url": "https://essays.aljoan.net/bio.html",
+    "sameAs": [
+      "https://x.com/Qais_Aljoan"
+    ],
+    "email": "mailto:essays@aljoan.net",
+    "jobTitle": "Writer, Former Professor and Advisor"
+  }
+  </script>
+
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 2em;
-      background: #fdfdfd;
-      color: #222;
-      line-height: 1.7;
-      transition: background 0.5s, color 0.5s;
+    :root{
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --muted:#555;
+      --accent:#7e2e2e; /* Silographia-like warm accent */
+      --card:#f7f7f7;
+      --border:#e6e6e6;
     }
-    h1 {
-      font-size: 1.8em;
-      margin-bottom: 0.2em;
+    [data-theme="dark"]{
+      --bg:#0e0e0f;
+      --text:#e8e8ea;
+      --muted:#b2b2b7;
+      --accent:#d7a26d;
+      --card:#17171a;
+      --border:#2a2a2f;
     }
-    h2 {
-      font-size: 1.4em;
-      margin-top: 2em;
-      color: #444;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 0.3em;
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji",sans-serif;line-height:1.6}
+    .wrap{max-width:920px;margin:0 auto;padding:24px}
+    header{padding:8px 0 16px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{font-weight:700;letter-spacing:0.2px}
+    .brand small{display:block;font-weight:500;color:var(--muted);letter-spacing:0}
+    .toggle{
+      border:1px solid var(--border);background:var(--card);color:var(--text);
+      padding:8px 12px;border-radius:10px;cursor:pointer;font-size:0.9rem;
     }
-    p {
-      margin: 0.5em 0;
+    nav.langs{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
+    .lang-btn{
+      border:1px solid var(--border);background:transparent;color:var(--text);
+      padding:6px 10px;border-radius:999px;cursor:pointer;font-size:0.9rem
     }
-    @media (max-width: 768px) {
-      body {
-        font-size: 1.05em;
-        margin: 1em;
-      }
+    .lang-btn.active{background:var(--accent);border-color:var(--accent);color:#fff}
+    .card{
+      background:var(--card);border:1px solid var(--border);border-radius:14px;
+      padding:20px;margin:14px 0;
     }
-
-    /* Option A: Gallery Style */
-    .artworks-gallery img {
-      display: block;
-      margin: 1em auto;
-      max-width: 100%;
-      height: auto;
-    }
-    /* END Option A */
-
-    /* Option B: Background Artwork */
-    body.option-b {
-      background: url('optimized_silographia_figure_transparent_(1).png') no-repeat center top;
-      background-size: contain;
-      background-attachment: fixed;
-    }
-    /* END Option B */
-
-    /* Option C: Hero + Gallery */
-    .hero-img {
-      width: 100%;
-      height: auto;
-      margin-bottom: 2em;
-    }
-    /* END Option C */
-
-    /* Dark mode toggle support */
-    @media (prefers-color-scheme: dark) {
-      body {
-        background: #111;
-        color: #ddd;
-      }
-      h2 {
-        color: #bbb;
-        border-color: #444;
-      }
-    }
+    h1{font-size:1.8rem;margin:16px 0 6px 0}
+    h2{font-size:1.1rem;color:var(--muted);font-weight:600;letter-spacing:.2px;margin:0 0 8px}
+    p{margin:0 0 12px}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    footer{margin:28px 0 12px;color:var(--muted);font-size:0.9rem}
+    /* Arabic */
+    [lang="ar"]{direction:rtl}
+    .note{font-size:0.95rem;color:var(--muted)}
   </style>
 </head>
-<body class="option-a"> <!-- Change to 'option-b' or remove class for Option C -->
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div>Silographia – <strong>Qais Aljoan</strong></div>
+        <small>Multilingual Biography</small>
+      </div>
+      <button id="themeToggle" class="toggle" aria-label="Toggle dark mode">🌓 Theme</button>
+    </header>
 
-  <h1>Qais Aljoan | Silographia | Multilingual Biography</h1>
+    <nav class="langs" aria-label="Language selector">
+      <button class="lang-btn active" data-lang="en">English</button>
+      <button class="lang-btn" data-lang="ar">العربية</button>
+      <button class="lang-btn" data-lang="es">Español</button>
+      <button class="lang-btn" data-lang="fr">Français</button>
+      <button class="lang-btn" data-lang="it">Italiano</button>
+    </nav>
 
-<a href="#" onclick="window.history.go(-1); return false;">  ← Volver atrás</a>
+    <!-- English -->
+    <section class="card lang-panel" id="panel-en" lang="en">
+      <h1>Qais Aljoan</h1>
+      <h2>Silographia — Multilingual Biography</h2>
+      <p>Former professor and advisor in development. I worked with Arab and international institutions and served on advisory boards. Early retirement gave me the space to gather decades of notes and reflections into essays.</p>
+      <p>Now I write — in Arabic, English, Spanish, French, and Italian — for a world that seeks fairness and listens with clarity.</p>
+      <p class="note">As language meets line, my selected artworks echo the inner geometry of thought and silence.</p>
+      <p><em>And you — what brought you here, and what guides you when you read a biography?</em></p>
+      <p>I welcome dialogue: you can reach me by DM on <a href="https://x.com/Qais_Aljoan" target="_blank" rel="noopener">@Qais_Aljoan</a>, or by email at <a href="mailto:essays@aljoan.net">essays@aljoan.net</a> for longer reflections and collaborations.</p>
+    </section>
 
-  <h2>English</h2>
-  <p>Former professor.<br>
-  Worked with Arab and international development institutions.<br>
-  Advisory board member, Reconnaissance Research.<br>
-  Now retired — writing for a world that sees with fairness and listens with quiet clarity.</p>
+    <!-- Arabic -->
+    <section class="card lang-panel" id="panel-ar" lang="ar" hidden>
+      <h1>قيس الجوعان</h1>
+      <h2>سيلوغرافيا — سيرة متعددة اللغات</h2>
+      <p>أستاذ جامعي ومستشار سابق في مجال التنمية؛ عملتُ مع مؤسسات عربية ودولية وشاركتُ في مجالس استشارية. منحني التقاعد المبكر فسحةً لأجمع ملاحظات عقودٍ من التجربة والتأمل في مقالات ودراسات.</p>
+      <p>أكتب اليوم — بالعربية والإنجليزية والإسبانية والفرنسية والإيطالية — من أجل عالمٍ أكثر إنصافًا وأفصح سمعًا.</p>
+      <p class="note">كما يلتقي الحرفُ مع الخطّ، تعكس أعمالي الفنية المختارة هندسة الفكر والصمت.</p>
+      <p><em>وأنت — ما الذي جاء بك إلى هنا، وما الذي يقودك حين تطالع السيرة؟</em></p>
+      <p>أرحّب بالحوار: يمكن مراسلتي عبر الرسائل الخاصة على <a href="https://x.com/Qais_Aljoan" target="_blank" rel="noopener">@Qais_Aljoan</a>، أو عبر البريد الإلكتروني <a href="mailto:essays@aljoan.net">essays@aljoan.net</a> للتأملات الأطول وفرص التعاون.</p>
+    </section>
 
-  <h2>Arabic</h2>
-  <p dir="rtl" lang="ar">أستاذ جامعي سابق.<br>
-  عملت مع مؤسسات عربية ودولية في مجال التنمية.<br>
-  عضو المجلس الاستشاري لمركز ريكونيسنس للأبحاث.<br>
-  متقاعد، أكتب من أجل عالمٍ أكثر إنصافاً، وأقلّ غفلة.</p>
+    <!-- Spanish -->
+    <section class="card lang-panel" id="panel-es" lang="es" hidden>
+      <h1>Qais Aljoan</h1>
+      <h2>Silographia — Biografía multilingüe</h2>
+      <p>Profesor universitario y asesor retirado en desarrollo. Trabajé con instituciones árabes e internacionales y formé parte de consejos consultivos. La jubilación anticipada me abrió el espacio para reunir décadas de notas y reflexiones en ensayos.</p>
+      <p>Hoy escribo — en árabe, inglés, español, francés e italiano — por un mundo más justo y más atento.</p>
+      <p class="note">Así como la palabra dialoga con la línea, mis obras reflejan la geometría interior del pensamiento y el silencio.</p>
+      <p><em>¿Y tú? ¿Qué te ha traído hasta aquí y qué te guía cuando lees una biografía?</em></p>
+      <p>Doy la bienvenida al diálogo: puedes escribirme por DM en <a href="https://x.com/Qais_Aljoan" target="_blank" rel="noopener">@Qais_Aljoan</a>, o al correo <a href="mailto:essays@aljoan.net">essays@aljoan.net</a> para reflexiones más largas o colaboraciones.</p>
+    </section>
 
-  <h2>Spanish</h2>
-  <p>Profesor universitario retirado.<br>
-  Trabajé con instituciones árabes e internacionales de desarrollo.<br>
-  Miembro del consejo asesor de Reconnaissance Research.<br>
-  Ahora jubilado — escribo por un mundo que ve con los ojos de la equidad y escucha con el rocío de la conciencia.</p>
+    <!-- French -->
+    <section class="card lang-panel" id="panel-fr" lang="fr" hidden>
+      <h1>Qais Aljoan</h1>
+      <h2>Silographia — Biographie multilingue</h2>
+      <p>Professeur et conseiller retraité dans le domaine du développement. J’ai travaillé avec des institutions arabes et internationales, et siégé à des conseils consultatifs. La retraite anticipée m’a permis de rassembler des décennies de notes et de réflexions en essais.</p>
+      <p>Aujourd’hui, j’écris — en arabe, anglais, espagnol, français et italien — pour un monde plus équitable et plus attentif.</p>
+      <p class="note">Comme le mot rejoint la ligne, mes œuvres visuelles reflètent la géométrie intérieure de la pensée et du silence.</p>
+      <p><em>Et vous — qu’est-ce qui vous a conduit ici, et qu’est-ce qui vous guide lorsque vous lisez une biographie&nbsp;?</em></p>
+      <p>Je vous invite au dialogue&nbsp;: vous pouvez m’écrire en DM sur <a href="https://x.com/Qais_Aljoan" target="_blank" rel="noopener">@Qais_Aljoan</a>, ou par email à <a href="mailto:essays@aljoan.net">essays@aljoan.net</a> pour des réflexions plus longues ou des collaborations.</p>
+    </section>
 
-  <h2>French</h2>
-  <p>Professeur d’université retraité.<br>
-  J’ai travaillé avec des institutions arabes et internationales de développement.<br>
-  Membre du conseil consultatif de Reconnaissance Research.<br>
-  Aujourd’hui à la retraite — j’écris pour un monde plus équitable, et moins aveugle.</p>
+    <!-- Italian -->
+    <section class="card lang-panel" id="panel-it" lang="it" hidden>
+      <h1>Qais Aljoan</h1>
+      <h2>Silographia — Biografia multilingue</h2>
+      <p>Ex docente universitario e consulente nello sviluppo. Ho lavorato con istituzioni arabe e internazionali e fatto parte di comitati consultivi. Il pensionamento anticipato mi ha dato lo spazio per raccogliere appunti e riflessioni di decenni in saggi.</p>
+      <p>Oggi scrivo — in arabo, inglese, spagnolo, francese e italiano — per un mondo più giusto e più vigile.</p>
+      <p class="note">Così come la parola incontra la linea, le mie opere visive riflettono la geometria interiore del pensiero e del silenzio.</p>
+      <p><em>E tu — cosa ti ha portato qui e cosa ti guida quando leggi una biografia?</em></p>
+      <p>Sono aperto al dialogo: puoi scrivermi in DM su <a href="https://x.com/Qais_Aljoan" target="_blank" rel="noopener">@Qais_Aljoan</a>, oppure via email a <a href="mailto:essays@aljoan.net">essays@aljoan.net</a> per riflessioni più ampie o collaborazioni.</p>
+    </section>
 
-  <h2>Italian</h2>
-  <p>Ex docente universitario.<br>
-  Ho lavorato con istituzioni arabe e internazionali per lo sviluppo.<br>
-  Membro del comitato consultivo di Reconnaissance Research.<br>
-  Ora in pensione — scrivo per un mondo più equo, e meno cieco alla verità.</p>
-
-  <!-- Transition paragraph before artworks -->
-  <p style="margin-top: 2em;">
-    As language meets line, these selected artworks reflect the inner geometry of thought and silence. They accompany the words — not to illustrate, but to echo.
-  </p>
-
-  <!-- Option A: Stacked Images -->
-  <div class="artworks-gallery">
-   
-    <img src="/images/Men_da.png" alt="Abstract Head">
-    
+    <footer>
+      © <span id="year"></span> Silographia – Qais Aljoan. All rights reserved.
+    </footer>
   </div>
-  <!-- END Option A -->
 
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
 
+    // Theme toggle with persistence
+    const root = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('sg_theme');
+    if(savedTheme){ root.setAttribute('data-theme', savedTheme); }
+    themeToggle.addEventListener('click', () => {
+      const current = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', current);
+      localStorage.setItem('sg_theme', current);
+    });
 
-</body></html>
+    // Language tabs
+    const btns = document.querySelectorAll('.lang-btn');
+    const panels = document.querySelectorAll('.lang-panel');
+    function showLang(code){
+      panels.forEach(p => {
+        const isActive = p.id === 'panel-' + code;
+        p.hidden = !isActive;
+      });
+      btns.forEach(b => b.classList.toggle('active', b.dataset.lang === code));
+      // Update URL hash for shareable state
+      history.replaceState(null, '', '#' + code);
+      // Update html dir attr for RTL when Arabic is active
+      if(code === 'ar'){ document.documentElement.setAttribute('dir', 'rtl'); }
+      else{ document.documentElement.setAttribute('dir', 'ltr'); }
+      // Update html lang
+      document.documentElement.setAttribute('lang', code === 'ar' ? 'ar' : code);
+    }
+    btns.forEach(b => b.addEventListener('click', () => showLang(b.dataset.lang)));
+    // Initialize from hash if present
+    const initial = (location.hash || '#en').replace('#','');
+    showLang(initial);
+  </script>
+</body>
+</html>
