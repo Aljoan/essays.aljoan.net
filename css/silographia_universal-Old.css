@@ -2,57 +2,36 @@
    Universal Stylesheet
    silographia-universal.css
    Supports: Arabic, English, Bilingual
-   Light/Dark mode + responsive
+   Light/Dark mode: auto by time + user toggle
    ============================ */
 
-/* -------- Root + Vars -------- */
-:root {
-  --bg-light: #fefaf3;  /* fondo claro */
-  --text-light: #111;   /* texto claro */
-  --bg-dark: #121212;   /* fondo oscuro */
-  --text-dark: #f0f0f0; /* texto oscuro */
-
-  /* Aseguramos acentos usados por componentes (blockquote, etc.) */
-  --accent2: #174a63;
+html {
+  scroll-behavior: smooth;
 }
 
-html { scroll-behavior: smooth; }
-
-/* -------- Body base -------- */
 body {
   font-family: 'Georgia', serif;
   line-height: 1.7;
   margin: 0 auto;
   padding: 0.2rem 1rem;
-  background-color: var(--bg-light);
-  color: var(--text-light);
+  background-color: #fefaf3; /* Updated background color */
+  color: #111; /* Default light text */
   transition: background-color 0.3s, color 0.3s;
-  border: 1px dotted #ddd; /* marco sutil */
+  border: 1px dotted #ddd; /* Added subtle dotted border */
 }
 
-/* -------- Header (site-header) -------- */
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 1000;
   background-color: #e5dbc8;
+  z-index: 1000;
   padding: 0.5rem 0rem;
   margin: 0;
   border-bottom: 1px solid #ccc;
-  display: block;    /* ancho completo */
+  display: block; /* Ensures full-width layout for centered content */
   text-align: center;
 }
 
-/* Si el documento es RTL, garantizamos coherencia de dirección en header */
-html[lang="ar"] .site-header,
-html[lang="fa"] .site-header,
-html[lang="ur"] .site-header,
-html[lang="he"] .site-header,
-[dir="rtl"] .site-header {
-  direction: rtl; /* seguro aunque no uses flex dentro */
-}
-
-/* -------- Theme toggle (opcional) -------- */
 .theme-toggle {
   font-size: 0.9rem;
   cursor: pointer;
@@ -64,12 +43,13 @@ html[lang="he"] .site-header,
   margin-top: 0.5rem;
 }
 
-/* -------- Typography -------- */
-h1, h2 { text-align: center; }
+/* Typography */
+h1, h2 {
+  text-align: center;
+}
 
-h3, h4, h5 { 
-  /* Alineación lógica: start = left (LTR), right (RTL) */
-  text-align: start; 
+h3, h4, h5 {
+  text-align: left;
 }
 
 .meta {
@@ -78,46 +58,61 @@ h3, h4, h5 {
   margin-bottom: 2rem;
 }
 
-p { text-align: justify; }
-
-a { color: #0055aa; text-decoration: none; }
-a:hover { text-decoration: underline; }
-
-/* -------- Containers -------- */
 .content {
   max-width: 800px;
   margin: auto;
-  padding: 0 1rem;
+  padding: 0 1rem; /* Ensures spacing from borders on both sides */
 }
 
-/* Bloques intro/poema con márgenes lógicos (sirve LTR/RTL) */
-.introduction,
-.poemar {
-  margin-inline: 20%;
+/* Used for general introductory content, including "Orichetto / introduction" blocks */
+.introduction {
+  margin-left: 20%;
+  margin-right: 20%;
   max-width: 60%;
   text-align: justify;
+  font-style: italic;
 }
-.poemar { font-size: 1.2rem; }
 
-/* -------- Footer -------- */
+/* Used for general introductory content, including "Orichetto / introduction" blocks */
+.poemar {
+  margin-left: 20%;
+  margin-right: 20%;
+  max-width: 60%;
+  text-align: justify;
+  font-size: 1.2rem;
+}
+
+
+p {
+  text-align: justify;
+}
+
+a {
+  color: #0055aa;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 .footer,
 footer {
   margin-top: 4rem;
   text-align: center;
   font-size: 0.85rem;
   color: #888;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #ccc; /* Added top border to footer */
 }
 
-/* -------- Legacy main (mantener por compatibilidad) -------- */
+/* Legacy support: used in older files only. For new content, prefer using semantic containers like <div class="content"> */
 main {
   max-width: 850px;
   padding: 2rem;
   margin: 0 auto;
-  /* ⚠️ Legacy only — prefer .content en nuevos archivos */
+  /* ⚠ Legacy only — avoid using in new files */
 }
 
-/* -------- Direccionalidad (idiomas) -------- */
 /* RTL support (Arabic, Persian, Urdu, Hebrew) */
 html[lang="ar"], html[lang="fa"], html[lang="ur"], html[lang="he"],
 body[dir="rtl"] {
@@ -131,18 +126,7 @@ body[dir="ltr"] {
   direction: ltr;
 }
 
-/* Tipografía árabe (sin afectar LTR) */
-:lang(ar) {
-  font-family: "Amiri","Noto Naskh Arabic","Scheherazade New",Tahoma,Arial,serif;
-}
-:lang(ar) h1, 
-:lang(ar) h2, 
-:lang(ar) h3 {
-  font-family: "Amiri","Noto Naskh Arabic",serif;
-  line-height: 1.6;
-}
-
-/* -------- Language switcher (LTR + RTL) -------- */
+/* Language switcher: funciona en LTR y RTL */
 .lang-switch{
   margin-block: 8px 16px;
   display: flex;
@@ -166,7 +150,7 @@ body[dir="ltr"] {
 .lang-switch a:hover{ opacity: 1; border-color: currentColor; }
 .lang-switch a.active{ font-weight: 700; opacity: 1; border-color: currentColor; }
 
-/* -------- Componentes con propiedades lógicas -------- */
+/* Bordes/padding lógicos para blockquote y notas (sirve en LTR/RTL) */
 blockquote{
   border-inline-start: 4px solid var(--accent2);
   padding: .5rem 1rem;
@@ -175,10 +159,15 @@ blockquote{
 }
 .endnotes ol{ padding-inline-start: 1.2rem; }
 
-/* Encabezados de artículo con alineación lógica y ritmo vertical */
+/* Encabezados alineados según dirección del documento */
 article h2{ margin-top: 2.4rem; text-align: start; }
 
-/* -------- Responsive -------- */
+/* Header espejado si el documento es RTL */
+:root[dir="rtl"] header{ flex-direction: row-reverse; }
+
+
+
+/* Responsive */
 @media screen and (max-width: 768px) {
   body {
     padding: 1rem;
@@ -187,7 +176,7 @@ article h2{ margin-top: 2.4rem; text-align: start; }
   }
   h1, h2, h3, h4, h5 {
     font-size: 1.3rem;
-    text-align: center; /* en móvil suele verse mejor centrado */
+    text-align: center;
     line-height: 1.4;
   }
   nav, footer {
@@ -206,19 +195,23 @@ article h2{ margin-top: 2.4rem; text-align: start; }
     display: block;
     margin: 1rem auto;
   }
-  /* Aseguramos centrado del conmutador también en móvil */
-  .lang-switch {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    justify-content: center;
-    align-items: center;
+  .language-switcher {
+    display: block;
     margin: 1rem auto;
     text-align: center;
   }
 }
 
-/* -------- Light/Dark Mode -------- */
+/* ======================
+   Light/Dark Mode Logic
+   ====================== */
+:root {
+  --bg-light: #fefaf3; /* Updated to match body */
+  --text-light: #111;
+  --bg-dark: #121212;
+  --text-dark: #f0f0f0;
+}
+
 body.light-mode {
   background-color: var(--bg-light);
   color: var(--text-light);
@@ -229,13 +222,17 @@ body.dark-mode {
   color: var(--text-dark);
 }
 
-body.dark-mode a { color: #66ccff; }
+body.dark-mode a {
+  color: #66ccff;
+}
 
 body.dark-mode .site-header {
   background-color: #1e1e1e;
   border-color: #444;
 }
 
-body.dark-mode .theme-toggle { border-color: #666; }
+body.dark-mode .theme-toggle {
+  border-color: #666;
+}
 
 /* JS-based toggle control expected to add/remove .dark-mode or .light-mode on <body> */
