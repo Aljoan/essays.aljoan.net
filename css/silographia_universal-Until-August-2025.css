@@ -1,0 +1,300 @@
+/* ============================
+   Universal Stylesheet
+   silographia-universal.css
+   Supports: Arabic, English, Bilingual
+   Light/Dark mode + responsive
+   ============================ */
+
+/* -------- Root + Vars -------- */
+:root {
+  --bg-light: #fefaf3;  /* fondo claro */
+  --text-light: #111;   /* texto claro */
+  --bg-dark: #121212;   /* fondo oscuro */
+  --text-dark: #f0f0f0; /* texto oscuro */
+
+  /* Aseguramos acentos usados por componentes (blockquote, etc.) */
+  --accent2: #174a63;
+}
+
+html { scroll-behavior: smooth; }
+
+/* -------- Body base -------- */
+body {
+  font-family: 'Georgia', serif;
+  line-height: 1.7;
+  margin: 0 auto;
+  padding: 0.2rem 1rem;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: background-color 0.3s, color 0.3s;
+  border: 1px dotted #ddd; /* marco sutil */
+}
+
+/* -------- Header (site-header) -------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #e5dbc8;
+  padding: 0.5rem 0rem;
+  margin: 0;
+  border-bottom: 1px solid #ccc;
+  display: block;    /* ancho completo */
+  text-align: center;
+}
+
+/* Si el documento es RTL, garantizamos coherencia de dirección en header */
+html[lang="ar"] .site-header,
+html[lang="fa"] .site-header,
+html[lang="ur"] .site-header,
+html[lang="he"] .site-header,
+[dir="rtl"] .site-header {
+  direction: rtl; /* seguro aunque no uses flex dentro */
+}
+
+/* -------- Theme toggle (opcional) -------- */
+.theme-toggle {
+  font-size: 0.9rem;
+  cursor: pointer;
+  background: none;
+  border: 1px solid #ccc;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  color: inherit;
+  margin-top: 0.5rem;
+}
+
+/* -------- Typography -------- */
+h1, h2 { text-align: center; }
+
+h3, h4, h5 { 
+  /* Alineación lógica: start = left (LTR), right (RTL) */
+  text-align: start; 
+}
+
+.meta {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+p { text-align: justify; }
+
+a { color: #0055aa; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* -------- Containers -------- */
+.content {
+  max-width: 800px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+/* Bloques intro/poema con márgenes lógicos (sirve LTR/RTL) */
+.introduction,
+.poemar {
+  margin-inline: 20%;
+  max-width: 60%;
+  text-align: justify;
+}
+.poemar { font-size: 1.2rem; }
+
+/* -------- Footer -------- */
+.footer,
+footer {
+  margin-top: 4rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #888;
+  border-top: 1px solid #ccc;
+}
+
+/* -------- Legacy main (mantener por compatibilidad) -------- */
+main {
+  max-width: 850px;
+  padding: 2rem;
+  margin: 0 auto;
+  /* ⚠️ Legacy only — prefer .content en nuevos archivos */
+}
+
+/* -------- Direccionalidad (idiomas) -------- */
+/* RTL support (Arabic, Persian, Urdu, Hebrew) */
+html[lang="ar"], html[lang="fa"], html[lang="ur"], html[lang="he"],
+body[dir="rtl"] {
+  direction: rtl;
+}
+
+/* LTR support (English, Spanish, French, Italian, Turkish, Russian, Ukrainian) */
+html[lang="en"], html[lang="es"], html[lang="fr"], html[lang="it"],
+html[lang="tr"], html[lang="ru"], html[lang="uk"],
+body[dir="ltr"] {
+  direction: ltr;
+}
+
+/* Tipografía árabe (sin afectar LTR) */
+:lang(ar) {
+  font-family: "Amiri","Noto Naskh Arabic","Scheherazade New",Tahoma,Arial,serif;
+}
+:lang(ar) h1, 
+:lang(ar) h2, 
+:lang(ar) h3 {
+  font-family: "Amiri","Noto Naskh Arabic",serif;
+  line-height: 1.6;
+}
+
+/* -------- Language switcher (LTR + RTL) -------- */
+.lang-switch{
+  margin-block: 8px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.95rem;
+  text-align: center;
+}
+.lang-switch .sep{ opacity: .4; }
+.lang-switch a{
+  text-decoration: none;
+  padding: 2px 10px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  opacity: .7;
+  transition: all .15s ease;
+  display: inline-block;
+}
+.lang-switch a:hover{ opacity: 1; border-color: currentColor; }
+.lang-switch a.active{ font-weight: 700; opacity: 1; border-color: currentColor; }
+
+/* -------- Componentes con propiedades lógicas -------- */
+blockquote{
+  border-inline-start: 4px solid var(--accent2);
+  padding: .5rem 1rem;
+  background: #ffffffb8;
+  margin-block: 1rem;
+}
+.endnotes ol{ padding-inline-start: 1.2rem; }
+
+/* Encabezados de artículo con alineación lógica y ritmo vertical */
+article h2{ margin-top: 2.4rem; text-align: start; }
+
+/* -------- Responsive -------- */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 1rem;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  h1, h2, h3, h4, h5 {
+    font-size: 1.3rem;
+    text-align: center; /* en móvil suele verse mejor centrado */
+    line-height: 1.4;
+  }
+  nav, footer {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  .author-signature, .date-tag {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  .content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+  }
+  /* Aseguramos centrado del conmutador también en móvil */
+  .lang-switch {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto;
+    text-align: center;
+  }
+}
+
+/* -------- Light/Dark Mode -------- */
+body.light-mode {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+body.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+body.dark-mode a { color: #66ccff; }
+
+body.dark-mode .site-header {
+  background-color: #1e1e1e;
+  border-color: #444;
+}
+
+body.dark-mode .theme-toggle { border-color: #666; }
+
+/* JS-based toggle control expected to add/remove .dark-mode or .light-mode on <body> */
+
+/* ============================
+   Silographia — Article Core
+   (migrated from inline <style>)
+   ============================ */
+
+/* Smooth scroll */
+html { scroll-behavior: smooth; }
+
+/* Offset anchored headings under fixed headers */
+:root { --headerH: 72px; }
+h1[id], h2[id], h3[id], section[id], [id].anchor-target {
+  scroll-margin-top: calc(var(--headerH) + 12px);
+}
+
+/* Compact language switcher */
+.lang-switch{
+  margin-block: 8px 16px;          /* logical margin (top/bottom) */
+  margin-inline: 0;                 /* logical margin (left/right) */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.95rem;
+}
+.lang-switch .sep{ opacity: .4; }
+
+/* Use logical paddings so RTL/LTR both look right */
+.lang-switch a{
+  text-decoration: none;
+  padding-block: 2px;               /* top/bottom */
+  padding-inline: 10px;             /* start/end */
+  border-radius: 999px;
+  border: 1px solid transparent;
+  opacity: .7;
+  transition: all .15s ease;
+}
+.lang-switch a:hover{ opacity: 1; border-color: currentColor; }
+.lang-switch a.active{
+  font-weight: 700;
+  opacity: 1;
+  border-color: currentColor;
+}
+
+/* ============== RTL SUPPORT ============== */
+/* Ensure baseline direction comes from the document */
+html[dir="rtl"] {
+  direction: rtl;
+}
+
+/* If you use any text-align rules elsewhere, prefer logical values:
+   text-align: start;  text-align: end;
+   Avoid left/right-specific spacing; use margin-inline/padding-inline. */
+
+/* Optional: if you ever have directional icons/arrows in switcher,
+   you can flip them in RTL with :dir(rtl) selector (supported widely). */
+/* .lang-switch :dir(rtl) .icon-chevron { transform: scaleX(-1); } */
+
