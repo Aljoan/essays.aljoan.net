@@ -48,43 +48,6 @@
   }
   </script>
 
-  <style>
-    :root{
-      --bg:#f5ead4; --ink:#1d1d1d; --accent:#7b2d26; --accent2:#174a63;
-      --muted:#6f6b63; --card:#f5ead4; --shadow:0 10px 25px rgba(0,0,0,.08);
-      --glass:#ffffffee; --glass-border:#00000018; color-scheme: only light;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;font-family: "Noto Naskh Arabic","Amiri","Scheherazade New",Tahoma,Arial,sans-serif;
-      background:var(--bg);color:var(--ink);line-height:1.9;direction:rtl;text-align:right;
-    }
-    h1,h2,h3{
-      font-family: "Amiri","Noto Naskh Arabic",Georgia,serif;color:var(--accent2);
-      line-height:1.5;
-    }
-    header{
-      position:sticky;top:0;background:var(--glass);backdrop-filter:blur(6px);
-      border-bottom:1px solid var(--glass-border);display:flex;justify-content:space-between;align-items:center;
-      padding:.75rem 1rem;z-index:100;flex-direction:row-reverse;
-    }
-    .brand{font-family:"Amiri",Georgia,serif;font-weight:700;font-size:1.1rem;display:flex;align-items:center;gap:.5rem;}
-    main{max-width:860px;margin:2rem auto;padding:0 1rem;}
-    article h2{margin-top:2.2rem;text-align:right;}
-    footer{text-align:center;padding:2rem 1rem;color:var(--muted);font-size:.95rem;}
-    .dock{position:sticky;bottom:0;background:var(--glass);backdrop-filter:blur(6px);
-      display:flex;justify-content:space-around;gap:.5rem;padding:.5rem 0;border-top:1px solid var(--glass-border);}
-    .dock a{font-size:.95rem;color:var(--ink);text-decoration:none;min-height:44px;display:flex;align-items:center;padding:.25rem .5rem;border-radius:.5rem;}
-    html { scroll-behavior: smooth; }
-    :root { --headerH: 72px; }
-    h1[id], h2[id], h3[id], section[id], [id].anchor-target { scroll-margin-top: calc(var(--headerH) + 12px); }
-    .byline{color:var(--muted); margin-top:.5rem; font-size:1rem;}
-    .note{background:#ffffffc7; border:1px solid var(--glass-border); padding:12px 14px; border-radius:8px;}
-    .sig{font-style:italic; margin-top:1.2rem;}
-    .endnotes ol{padding-right:1.2rem;}
-    .endnotes li{margin-bottom:.6rem;}
-    blockquote{border-right:4px solid var(--accent2); padding:.5rem 1rem; background:#ffffffb8; margin:1rem 0;}
-  </style>
 </head>
 <body>
     <!-- =====  header  ===== -->
@@ -127,8 +90,9 @@
   <div class="byline">بقلم: قيس عبدالله الجوعان — <span class="meta">سبتمبر ٢٠٢٥</span></div>
 <br>
 <article>
-  <p class="note"><strong>تمهيد.</strong> في تصعيده الأخير ضد إسبانيا، قال بنيامين نتنياهو إن انتقاد إسرائيل «يهدّد الدولة اليهودية الوحيدة في العالم». وراء هذه العبارة أربعة افتراضات واهية: أنّ وجود «دولة يهودية» واجب بذاته؛ وأنّ موضعها الحتمي فلسطين؛ وأنّ روايات قديمة تُشرعن اغتصاب الحاضر؛ وأنّ إسرائيل تمثل جميع يهود العالم. هذه الافتراضات تتهاوى تحت ميزان القانون، وتمتحنها الإنسانية، ويفضحها منطق العقل.</p>
-
+  <section class="intro-orichetto">
+    <p><strong>&#x06DE;تمهيد.</strong> في تصعيده الأخير ضد إسبانيا، قال بنيامين نتنياهو إن انتقاد إسرائيل «يهدّد الدولة اليهودية الوحيدة في العالم». وراء هذه العبارة أربعة افتراضات واهية: أنّ وجود «دولة يهودية» واجب بذاته؛ وأنّ موضعها الحتمي فلسطين؛ وأنّ روايات قديمة تُشرعن اغتصاب الحاضر؛ وأنّ إسرائيل تمثل جميع يهود العالم. هذه الافتراضات تتهاوى تحت ميزان القانون، وتمتحنها الإنسانية، ويفضحها منطق العقل.</p>
+  </section>
   <h2 id="q1">أولًا: هل يجب أن تقوم «دولة يهودية»؟</h2>
   <p><strong>القانون.</strong> لا يوجد في القانون الدولي نصّ يمنح ديانة بعينها «حقًا» في دولة قومية دينية. المبدأ هو المساواة الكاملة دون تمييز ديني أو عرقي، كما نصّ الإعلان العالمي لحقوق الإنسان والعهدان الدوليان.</p>
   <p><strong>الإنسانية.</strong> لليهود، كسائر البشر، حق في الأمان واللغة والثقافة والذاكرة. لكن هذه الحقوق تتحقق في إطار دولة مدنية تعددية، لا في كيان إقصائي يقوم على الدين.</p>
@@ -203,6 +167,10 @@
 </main>
 
 <footer>© <span id="year"></span> Silographia – قيس الجوعان</footer>
+
+<footer>
+  © 2025 Silographia – قيس الجوعان
+</footer>
 <nav class="dock" role="navigation" aria-label="شريط التصفّح السفلي">
   <a href="/index.html" aria-label="الانتقال إلى الصفحة الرئيسية">الرئيسية</a>
   <a href="/notes/privacy.html" aria-label="سياسة الخصوصية">سياسة الخصوصية</a>

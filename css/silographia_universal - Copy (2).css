@@ -34,7 +34,7 @@ a:focus-visible, button:focus-visible {
 /* ========== 1) Root, Direction & Anchor Offset ========== */
 /* Theme variables & shared token  */
 :root {
-  --bg-light: #e5dbc8; /* light sand backgroung    alt: --bg:#f5ead4; */
+  --bg-light: #e5dbc8; /* light sand backgroung */
   /*  --bg-light: #fefaf3;    light background */
   --text-light: #111;    /* light text */
   --bg-dark: #121212;    /* dark background */
@@ -43,17 +43,6 @@ a:focus-visible, button:focus-visible {
   --accent2-light: #3fa4cc; /* lighter accent for dark mode */
 
   --headerH: 72px;       /* sticky header height for anchor offset */
-
-  /* Additional colors */
-  --ink: #1d1d1d;
-  --accent: #7b2d26;
-  --muted: #6f6b63;
-  --card: #f5ead4;
-  --shadow: 0 10px 25px rgba(0,0,0,.08);
-  --glass: #ffffffee;
-  --glass-border: #00000018;
-
-  color-scheme: light dark;
 }
 
 html { scroll-behavior: smooth; }
@@ -93,7 +82,7 @@ body {
   background-color: var(--bg-light);
   color: var(--text-light);
   transition: background-color 0.3s, color 0.3s;
-  border: 1px dotted var(--glass-border); /* subtle frame */
+  border: 1px dotted #ddd; /* subtle frame (optional; remove if undesired) */
 }
 
 /* Header: sticky + compact + perfectly aligned */
@@ -106,10 +95,11 @@ body {
   justify-content: space-between;
   padding: .55rem clamp(12px, 2vw, 24px);
   line-height: 1.2;            /* avoids tall header from body line-height */
-  background: var(--glass);    /* glass via tokens */
+  /* background: #e5dbc8cc;       /* sand w/ slight transparency */
+  background: #ffffffcc;       /*  white / slight transparency */
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px); /* Safari */
-  border-bottom: 1px solid var(--glass-border);
+  border-bottom: 1px solid #ccc;
 }
 
 /* Brand row (logo + name) */
@@ -139,6 +129,7 @@ body {
   .brand img{ height: 46px; }
 }
 
+
 /* improves Brand logo   */
 .brand-link:focus-visible img {
   outline: 2px solid currentColor;
@@ -147,6 +138,7 @@ body {
   box-shadow: 0 0 0 2px rgba(0,0,0,.08);
   cursor: pointer;
 }
+
 
 /* Keep header coherent in RTL documents */
 html[lang="ar"] .site-header,
@@ -210,7 +202,7 @@ main {
 .poemar { font-size: 1.2rem; }
 
 /* Mobile: allow full width for readability */
-@media screen and (pmx-width: 768px) {
+@media screen and (max-width: 768px) {
   .introduction,
   .poemar {
     margin-inline: 0;
@@ -254,14 +246,14 @@ main {
 blockquote {
   border-inline-start: 4px solid var(--accent2);
   padding: .5rem 1rem;
-  background: var(--glass);
+  background: #ffffffb8;
   margin-block: 1rem;
 }
 
 /* —— Variant 1: Classic (narrow, subtle) —— */
 blockquote.bq-classic, .bq-classic {
   border-inline-start: 4px solid var(--accent2);
-  background: var(--glass);
+  background: #ffffffb8;
   padding: .6rem 1rem;
   margin-block: 1.2rem;
   font-style: italic;
@@ -272,7 +264,7 @@ blockquote.bq-frame, .bq-frame {
   border: 1px dashed #bbb;
   border-radius: 8px;
   padding: 1rem 1.2rem;
-  background: var(--card);
+  background: #fffef8;
   margin-block: 1.2rem;
 }
 
@@ -361,7 +353,7 @@ body.dark-mode .hl-outline { box-shadow: inset 0 0 0 1px #666; }
    plus a gentle dropcap for the first letter. Works in RTL/LTR. */
 .intro-orichetto {
   position: relative;
-  background: var(--card);
+  background: #fffdf7;
   border: 1px solid #e8dcc2;
   border-radius: 12px;
   padding: 1rem 1.2rem;
@@ -413,7 +405,7 @@ article h2 { margin-block-start: 2.4rem; text-align: start; }
   .author-signature, .date-tag {
     display: block;
     margin-block-start: 1rem;
-    background: var(--glass);
+    background: #ffffffcc;       /*  white / slight transparency */
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px); /* Safari */
     font-size: 0.9rem;
@@ -423,22 +415,16 @@ article h2 { margin-block-start: 2.4rem; text-align: start; }
   .lang-switch { margin: 1rem auto; }
 }
 
+
 /* Global nav/footer alignment */
-nav, footer { text-align: center; font-size: 0.9rem; color: var(--muted); }
+nav, footer { text-align: center; font-size: 0.9rem; }
+
 
 /* ========== 13) Light/Dark Modes ========== */
 body.light-mode { background-color: var(--bg-light); color: var(--text-light); }
 body.dark-mode  { background-color: var(--bg-dark);  color: var(--text-dark); }
-
-/* Links in dark mode — keep brand accent */
-body.dark-mode a { color: var(--accent2-light); }
-
-/* Header glass & borders via tokens in dark */
-body.dark-mode .site-header {
-  background: var(--glass);
-  border-color: var(--glass-border);
-}
-
+body.dark-mode a { color: #66ccff; }
+body.dark-mode .site-header { background-color: #1e1e1e; border-color: #444; }
 body.dark-mode .theme-toggle { border-color: #666; }
 
 /* Headings in dark mode: lighter accent for contrast */
@@ -453,8 +439,8 @@ body.dark-mode h3 {
 .editorial-note {
   font-style: italic;
   font-size: 0.95rem;
-  color: var(--muted);           /* dark grey via token */
-  margin: 2em 10em;              /* wide margins on desktop */
+  color: #555;                /* dark grey as requested */
+  margin: 2em 10em;           /* wide margins on desktop */
   text-align: start;
 }
 @media (max-width: 900px) {
@@ -467,7 +453,7 @@ body.dark-mode h3 {
 /* Section divider <hr class="section-divider" /> */
 hr.section-divider {
   border: 0;
-  border-top: 1px solid var(--glass-border);
+  border-top: 1px solid #ccc;
   margin-block: 1em;
   opacity: .5;
 }
@@ -476,7 +462,7 @@ hr.section-divider {
 .follow {
   margin-block-start: 2rem;
   text-align: center;
-  color: var(--muted);
+  color: #555;
 }
 .follow .social {
   display: flex;
@@ -487,7 +473,7 @@ hr.section-divider {
 .follow .social svg {
   width: 28px;
   height: 28px;
-  fill: var(--muted);
+  fill: #555;                 /* inherits your current icon color */
 }
 
 /* ========== 11d) Footnotes / Endnotes ========== */
@@ -504,14 +490,14 @@ hr.section-divider {
 nav.dock {
   position: sticky;
   inset-block-end: 0;         /* bottom */
-  background: var(--glass);   /* theme-aware glass */
+  background: #ffffffee;      /* light “glass” feel without needing new vars */
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   display: flex;
   justify-content: space-around;
   gap: .5rem;
   padding: .5rem 0;
-  border-top: 1px solid var(--glass-border);
+  border-top: 1px solid #00000018;
 }
 nav.dock a {
   font-size: .85rem;
@@ -523,59 +509,3 @@ nav.dock a {
   padding: .25rem .5rem;
   border-radius: .5rem;
 }
-
-/* ========== 14) Cards ========== */
-:root {
-  /* already defined in your file:
-  --card: #f5ead4;
-  --ink: #1d1d1d;
-  --muted: #6f6b63;
-  --glass: #ffffffee;
-  --glass-border: #00000018;
-  --shadow: 0 10px 25px rgba(0,0,0,.08);
-  */
-}
-
-/* Card base */
-.card {
-  background: var(--card);
-  color: var(--ink);
-  border: 1px solid var(--glass-border);
-  border-radius: 14px;
-  box-shadow: var(--shadow);
-  padding: 1rem 1.2rem;
-  transition: transform .15s ease, box-shadow .15s ease, background-color .2s ease;
-}
-
-/* Substructure (optional) */
-.card-header { font-weight: 700; margin-block-end: .4rem; color: var(--accent2); }
-.card-meta   { font-size: .9rem; color: var(--muted); margin-block-end: .6rem; }
-.card-body   { line-height: 1.7; }
-.card-footer { margin-block-start: .8rem; display: flex; gap: .6rem; justify-content: flex-end; }
-
-/* Media inside card */
-.card :is(img, video, svg) { border-radius: 10px; }
-.card img { margin: .5rem 0; }
-
-/* Interactive feel */
-.card:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,.12); }
-.card:focus-within { outline: 2px solid var(--accent2-light); outline-offset: 2px; }
-
-/* Variants */
-.card--elevated { background: var(--glass); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
-.card--outlined { background: transparent; border: 1px dashed var(--glass-border); box-shadow: none; }
-.card--compact  { padding: .8rem 1rem; }
-
-/* Clickable card */
-a.card, .card--link { display: block; text-decoration: none; color: inherit; }
-
-/* Card grid */
-.cards {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-}
-@media (max-width: 520px) { .cards { grid-template-columns: 1fr; } }
-
-/* Dark mode tweaks (inherits tokens automatically) */
-body.dark-mode .card--outlined { border-color: var(--glass-border); }
