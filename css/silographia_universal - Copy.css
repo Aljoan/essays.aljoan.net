@@ -40,7 +40,7 @@ a:focus-visible, button:focus-visible {
   --bg-dark: #121212;    /* dark background */
   --text-dark: #f0f0f0;  /* dark text */
   --accent2: #174a63;    /* teal-ink accent used in quotes, etc. */
-  --accent2-light: #3fa4cc; /* lighter accent for dark mode */
+ 
 
   --headerH: 72px;       /* sticky header height for anchor offset */
 }
@@ -173,9 +173,10 @@ a:hover { text-decoration: underline; }
 }
 
 /* Headings use accent2 color */
-h1, h2, h3 {
+h1, h2, h3,h4, h5 {
   color: var(--accent2);
 }
+
 
 /* ========== 4) Containers ========== */
 .content {
@@ -422,12 +423,6 @@ body.dark-mode a { color: #66ccff; }
 body.dark-mode .site-header { background-color: #1e1e1e; border-color: #444; }
 body.dark-mode .theme-toggle { border-color: #666; }
 
-/* Headings in dark mode: lighter accent for contrast */
-body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode h3 {
-  color: var(--accent2-light);
-}
 
 /* ========== 11b) Editorial Note & Section Divider ========== */
 /* Dark grey editorial note block consistent across articles */
