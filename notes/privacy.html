@@ -4,79 +4,25 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Notice — essays.aljoan.net</title>
-  <meta name="description" content="This site does not use cookies, analytics, or tracking. Multilingual notice: EN (official), ES, FR, IT, AR.">
+  <meta name="description" content="No cookies. Privacy-friendly, cookie-less analytics (Plausible). No ads pixels or fingerprinting. Multilingual notice: EN (official), ES, FR, IT, AR.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://essays.aljoan.net/notes/privacy.html">
 
-
+  <!-- Privacy-friendly analytics (cookie-less) -->
   <script defer data-domain="essays.aljoan.net" src="https://plausible.io/js/script.js"></script>
-  <style>
-    :root {
-      --maxw: 860px;
-      --pad: 18px;
-      --fg: #111;
-      --muted: #555;
-      --border: #e5e5e5;
-      --link: #66b3ff;
-      --bg: #fff;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --fg: #eaeaea;
-        --muted: #b9b9b9;
-        --border: #3a3a3a;
-        --link: #66b3ff;
-        --visited: hwb(261 54% 8%); /* visited color (dark purple) */
-        --bg: #111;
-      }
-    }
-    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg); }
-    body { font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
-    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 32px var(--pad) 48px; }
-    header { margin-bottom: 16px; }
-    header a.back { text-decoration: none; color: var(--link); font-weight: 500; }
-    h1 { font-size: 1.9rem; line-height: 1.25; margin: 10px 0 12px; }
-    .meta { color: var(--muted); font-size: 0.95rem; margin-bottom: 6px; }
-    .lang { margin: 8px 0 18px; font-size: 0.95rem; color: var(--muted); }
-    .lang a { color: var(--link); text-decoration: none; }
-    hr { border: 0; border-top: 1px solid var(--border); margin: 18px 0 22px; }
-    h2 { font-size: 1.15rem; margin: 16px 0 8px; }
-    p { margin: 0 0 12px; }
-    .note { background: rgba(0,0,0,.03); border: 1px solid var(--border); padding: 10px 12px; border-radius: 8px; font-size: 0.95rem; }
-    @media (prefers-color-scheme: dark) {
-      .note { background: rgba(255,255,255,.03); }
-    }
-    section { scroll-margin-top: 72px; }
-    footer { margin-top: 28px; padding-top: 16px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.95rem; }
-    footer a { color: var(--link); text-decoration: none; }
-    [lang="ar"] { direction: rtl; text-align: start; }
-
-    /* Global link rules (apply to all links: email, internal, external) */
-a {
-  color: var(--link);
-  text-decoration: none;
-}
-
-a:hover,
-a:focus {
-  text-decoration: underline; /* optional */
-}
-
-a:visited {
-  color: var(--visited, var(--link)); /* fallback: use --link if --visited not defined */
-}
-
-  </style>
 
 
+
+    <!-- CSS -->
+  <link rel="stylesheet" href="/css/silographia_universal.css"/>
 </head>
 <body>
   <div class="wrap">
     <header id="top">
-      <a href="#" onclick="window.history.go(-1); return false;">  ← Volver atrás</a>
+      <a href="#" class="back" onclick="window.history.go(-1); return false;">← Back</a>
       <h1>Privacy Notice</h1>
-      <div class="meta">By Qais Aljoan — Last updated: August 2025</div>
-      <div class="lang" aria-label="Language switcher">
+      <div class="meta">By Qais Aljoan — Last updated: September 2025</div>
+      <div class="lang-switch" aria-label="Language switcher">
         <strong>Languages:</strong>
         <a href="#en" hreflang="en">English (official)</a> · 
         <a href="#es" hreflang="es">Español</a> · 
@@ -84,7 +30,7 @@ a:visited {
         <a href="#it" hreflang="it">Italiano</a> · 
         <a href="#ar" hreflang="ar">العربية</a>
       </div>
-      <p class="note">The <strong>English section</strong> below is the canonical, legally binding version. Translations are provided for convenience.</p>
+      <h2 class="card card--elevated">The <strong>English section</strong> below is the canonical, legally binding version. Translations are provided for convenience.</h2>
     </header>
 
     <hr>
@@ -92,11 +38,11 @@ a:visited {
     <!-- English (official) -->
     <section id="en" lang="en" aria-labelledby="en-title">
       <h2 id="en-title">English (Official)</h2>
-      <p>This website, hosted at <strong>essays.aljoan.net</strong>, does not use cookies, analytics, advertising pixels, or other tracking technologies. We do not collect, store, or process personal data from visitors.</p>
+      <p>This website, hosted at <strong>essays.aljoan.net</strong>, does not use cookies, advertising pixels, fingerprinting, or cross-site tracking. We use <a href="https://plausible.io/privacy-focused-web-analytics" target="_blank" rel="noopener">Plausible Analytics</a>, a privacy-friendly, cookie-less analytics tool, to measure overall traffic and page usage. The reports are aggregated and do not identify individual visitors.</p>
       <p>Our hosting provider may automatically generate standard server logs for security and technical reasons (e.g., IP address, date/time, requested pages, user agent). These logs are used only to keep the service reliable and secure and are not combined with other data for profiling or marketing.</p>
       <p>This site does not offer contact forms, comment systems, newsletter signups, or user accounts. If you contact us by email or social media, any personal data you provide will be processed solely to respond to your message and will not be used for marketing or shared with third parties.</p>
       <p>We may update this page to reflect changes in the site’s features or applicable law. Material changes will be noted at the top of the page with a revised date.</p>
-      <p>Contact: <a href="mailto:contact@aljoan.net">contact@aljoan.net</a></p>
+      <p>Contact: <a href="mailto:essays@aljoan.net">essays@aljoan.net</a></p>
     </section>
 
     <hr>
@@ -104,10 +50,11 @@ a:visited {
     <!-- Spanish -->
     <section id="es" lang="es" aria-labelledby="es-title">
       <h2 id="es-title">Español</h2>
-      <p>Este sitio web (<strong>essays.aljoan.net</strong>) no utiliza cookies, análisis, píxeles publicitarios ni otras tecnologías de seguimiento. No recopilamos, almacenamos ni tratamos datos personales de los visitantes.</p>
-      <p>El proveedor de alojamiento puede generar registros técnicos básicos (p. ej., dirección IP, fecha/hora, páginas solicitadas, agente de usuario) únicamente por motivos de seguridad y funcionamiento. No se combinan con otros datos para elaborar perfiles ni con fines de marketing.</p>
-      <p>Este sitio no ofrece formularios de contacto, comentarios, boletines ni cuentas de usuario. Si nos contacta por correo electrónico o redes sociales, los datos personales que nos proporcione se utilizarán exclusivamente para responder a su mensaje y no se emplearán con fines de marketing ni se cederán a terceros.</p>
-      <p><em>Nota:</em> Esta traducción se ofrece como cortesía. La versión oficial y vinculante es la inglesa.</p>
+      <p>Este sitio web (<strong>essays.aljoan.net</strong>) no utiliza cookies, píxeles publicitarios, <em>fingerprinting</em> ni seguimiento entre sitios. Utilizamos <a href="https://plausible.io/privacy-focused-web-analytics" target="_blank" rel="noopener">Plausible Analytics</a>, una herramienta de analítica respetuosa con la privacidad y sin cookies, para medir el tráfico general y el uso de las páginas. Los informes son agregados y no permiten identificar a visitantes individuales.</p>
+      <p>El proveedor de alojamiento puede generar registros técnicos estándar (p. ej., dirección IP, fecha/hora, páginas solicitadas, agente de usuario) por motivos de seguridad y funcionamiento. Esos registros se usan únicamente para mantener el servicio fiable y seguro y no se combinan con otros datos con fines de perfilado o marketing.</p>
+      <p>Este sitio no ofrece formularios de contacto, comentarios, boletines ni cuentas de usuario. Si se comunica con nosotros por correo electrónico o redes sociales, los datos personales que proporcione se tratarán exclusivamente para responder a su mensaje y no se usarán con fines comerciales ni se compartirán con terceros.</p>
+      <p>Podemos actualizar esta página para reflejar cambios en las funciones del sitio o en la normativa aplicable. Los cambios materiales se indicarán arriba con una fecha revisada.</p>
+      <p>Contacto: <a href="mailto:essays@aljoan.net">essays@aljoan.net</a></p>
       <p><a class="back" href="#top">↑ Volver arriba</a></p>
     </section>
 
@@ -116,10 +63,11 @@ a:visited {
     <!-- French -->
     <section id="fr" lang="fr" aria-labelledby="fr-title">
       <h2 id="fr-title">Français</h2>
-      <p>Ce site (<strong>essays.aljoan.net</strong>) n’utilise ni cookies, ni outils d’analyse, ni pixels publicitaires, ni technologies de traçage. Nous ne collectons, n’enregistrons ni ne traitons de données personnelles des visiteurs.</p>
-      <p>L’hébergeur peut générer des journaux techniques standards (adresse IP, date/heure, pages consultées, agent utilisateur) uniquement pour des raisons de sécurité et de bon fonctionnement. Ils ne sont pas combinés à d’autres données à des fins de profilage ou de marketing.</p>
-      <p>Ce site ne propose pas de formulaires de contact, de commentaires, d’abonnements à des newsletters ni de comptes utilisateur. Si vous nous contactez par e-mail ou via les réseaux sociaux, les données personnelles fournies seront utilisées uniquement pour répondre à votre message et ne seront ni employées à des fins marketing, ni partagées avec des tiers.</p>
-      <p><em>Remarque&nbsp;:</em> cette traduction est fournie à titre informatif. La version officielle et contraignante est l’anglaise.</p>
+      <p>Ce site (<strong>essays.aljoan.net</strong>) n’utilise pas de cookies, de pixels publicitaires, de <em>fingerprinting</em> ni de traçage inter-sites. Nous utilisons <a href="https://plausible.io/privacy-focused-web-analytics" target="_blank" rel="noopener">Plausible Analytics</a>, un outil d’analytique respectueux de la vie privée et sans cookies, afin de mesurer le trafic global et l’usage des pages. Les rapports sont agrégés et ne permettent pas d’identifier les visiteurs individuellement.</p>
+      <p>Notre hébergeur peut générer des journaux techniques standard (adresse IP, date/heure, pages consultées, agent utilisateur) pour des raisons de sécurité et de bon fonctionnement. Ces journaux sont utilisés uniquement pour la fiabilité et la sécurité du service et ne sont pas combinés avec d’autres données à des fins de profilage ou de marketing.</p>
+      <p>Ce site ne propose pas de formulaires de contact, de commentaires, d’inscriptions à des newsletters ni de comptes utilisateur. Si vous nous contactez par e-mail ou via les réseaux sociaux, les données personnelles fournies seront utilisées uniquement pour répondre à votre message et ne seront ni utilisées à des fins marketing, ni partagées avec des tiers.</p>
+      <p>Nous pouvons mettre à jour cette page pour refléter l’évolution des fonctionnalités du site ou du droit applicable. Les modifications substantielles seront signalées en haut de page avec une date révisée.</p>
+      <p>Contact : <a href="mailto:essays@aljoan.net">essays@aljoan.net</a></p>
       <p><a class="back" href="#top">↑ Retour en haut</a></p>
     </section>
 
@@ -128,24 +76,31 @@ a:visited {
     <!-- Italian -->
     <section id="it" lang="it" aria-labelledby="it-title">
       <h2 id="it-title">Italiano</h2>
-      <p>Questo sito (<strong>essays.aljoan.net</strong>) non utilizza cookie, strumenti di analisi, pixel pubblicitari o altre tecnologie di tracciamento. Non raccogliamo, archiviamo o trattiamo dati personali dei visitatori.</p>
-      <p>Il provider di hosting può generare registri tecnici di base (indirizzo IP, data/ora, pagine richieste, user agent) esclusivamente per motivi di sicurezza e funzionamento. Tali dati non vengono combinati con altri per creare profili né usati a fini di marketing.</p>
+      <p>Questo sito (<strong>essays.aljoan.net</strong>) non utilizza cookie, pixel pubblicitari, <em>fingerprinting</em> né tracciamento tra siti. Utilizziamo <a href="https://plausible.io/privacy-focused-web-analytics" target="_blank" rel="noopener">Plausible Analytics</a>, uno strumento di analisi rispettoso della privacy e senza cookie, per misurare il traffico complessivo e l’uso delle pagine. I report sono aggregati e non consentono di identificare i singoli visitatori.</p>
+      <p>Il provider di hosting può generare registri tecnici standard (indirizzo IP, data/ora, pagine richieste, user agent) per ragioni di sicurezza e funzionamento. Tali registri sono utilizzati solo per mantenere il servizio affidabile e sicuro e non vengono combinati con altri dati a fini di profilazione o marketing.</p>
       <p>Il sito non offre moduli di contatto, commenti, newsletter o account utente. Se ci contatti via e-mail o social, i dati personali forniti saranno trattati esclusivamente per rispondere al tuo messaggio e non saranno usati per marketing né condivisi con terzi.</p>
-      <p><em>Nota:</em> questa traduzione è fornita per comodità. La versione ufficiale e vincolante è quella inglese.</p>
+      <p>Possiamo aggiornare questa pagina per riflettere eventuali cambiamenti nelle funzionalità del sito o nella normativa applicabile. Le modifiche sostanziali saranno indicate in alto con una data aggiornata.</p>
+      <p>Contatto: <a href="mailto:essays@aljoan.net">essays@aljoan.net</a></p>
       <p><a class="back" href="#top">↑ Torna su</a></p>
     </section>
 
     <hr>
 
-    <!-- Arabic -->
-    <section id="ar" lang="ar" aria-labelledby="ar-title">
-      <h2 id="ar-title">العربية</h2>
-      <p>هذا الموقع (<strong>essays.aljoan.net</strong>) لا يستخدم ملفات تعريف الارتباط، ولا أدوات التحليل، ولا بكسلات الإعلانات، ولا تقنيات التتبّع الأخرى. لا نقوم بجمع أو تخزين أو معالجة أي بيانات شخصية من الزوّار.</p>
-      <p>قد يُنشئ مزوّد الاستضافة سجلات تقنية أساسية (مثل عنوان الـIP، تاريخ/وقت الزيارة، الصفحات المطلوبة، برنامج المتصفّح) لأغراض الأمان والتشغيل فقط. ولا تُدمج هذه السجلات مع بيانات أخرى لأغراض إنشاء ملفات تعريفية أو التسويق.</p>
-      <p>لا يوفّر هذا الموقع نماذج تواصل، أو نظام تعليقات، أو نشرات بريدية، أو حسابات مستخدمين. إذا تواصلتم معنا عبر البريد الإلكتروني أو شبكات التواصل، فستُستخدم أي بيانات شخصية تقدّمونها فقط للرد على رسالتكم، ولن تُستخدم لأغراض تسويقية ولن تُشارك مع أطراف ثالثة.</p>
-      <p><em>تنويه:</em> هذه الترجمة متوفرة <strong>للاطّلاع فقط</strong>. النسخة الرسمية الملزِمة قانونياً هي النسخة الإنجليزية.</p>
-      <p><a class="back" href="#top">↑ العودة للأعلى</a></p>
-    </section>
+<section id="ar" lang="ar" dir="rtl" aria-labelledby="ar-title">
+  <h2 id="ar-title">العربية</h2>
+  <p>هذا الموقع (<strong>essays.aljoan.net</strong>) لا يستخدم ملفات تعريف الارتباط، ولا بكسلات الإعلانات، ولا تقنيات البصمة الرقمية، ولا التتبّع عبر المواقع. نستخدم <a href="https://plausible.io/privacy-focused-web-analytics" target="_blank" rel="noopener">Plausible Analytics</a>، وهي أداة تحليلات تراعي الخصوصية وتعمل من دون ملفات تعريف الارتباط، لقياس حركة الزيارة العامة واستخدام الصفحات. التقارير تكون مُجمَّعة ولا تُمكّننا من التعرّف على هوية الزوّار فرادى.</p>
+  <p>قد يُنشئ مزوّد الاستضافة سجلات تقنية قياسية (مثل عنوان الـIP، تاريخ/وقت الزيارة، الصفحات المطلوبة، ووكيل المستخدم) لأغراض الأمان والتشغيل فقط. ولا تُدمج هذه السجلات مع بيانات أخرى لأغراض إنشاء ملفات تعريفية أو التسويق.</p>
+  <p>لا يوفّر هذا الموقع نماذج تواصل، أو نظام تعليقات، أو نشرات بريدية، أو حسابات مستخدمين. إذا تواصلتم معنا عبر البريد الإلكتروني أو شبكات التواصل، فسنستخدم أي بيانات شخصية تقدّمونها حصراً للرد على رسالتكم، ولن نستخدمها لأغراض تسويقية، ولن نشاركها مع أي طرف ثالث.</p>
+  <p>قد نقوم بتحديث هذه الصفحة لتعكس أي تغييرات في خصائص الموقع أو في القوانين المطبّقة. وستُشار إلى التغييرات الجوهرية في أعلى الصفحة مع تاريخ مُحدّث.</p>
+  <p>
+    للتواصل: 
+    <a href="mailto:essays@aljoan.net">essays@aljoan.net</a>
+    <!--
+    <button class="copybtn" type="button" aria-label="نسخ البريد" data-copy="essays@aljoan.net">نسخ</button>
+    -->
+  </p>
+  <p><a class="back" href="#top">↑ العودة للأعلى</a></p>
+</section>
 
     <footer>
       <p>© 2025 Qais Aljoan — <a href="/">Home</a></p>
