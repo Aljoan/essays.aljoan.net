@@ -190,5 +190,24 @@
 <script>
   document.getElementById('year').textContent=new Date().getFullYear();
 </script>
+
+  <script>
+    /* makes every .media tap go to the card’s first link */
+  document.querySelectorAll('.peek-card').forEach(card => {
+    const media = card.querySelector('.media');
+    const link  = card.querySelector('a[href]');
+    if (!media || !link) return;
+
+    media.style.cursor = 'pointer';
+    media.setAttribute('role','link');
+    media.setAttribute('tabindex','0');
+    media.setAttribute('aria-label', media.getAttribute('aria-label') || card.querySelector('h3')?.textContent || 'Abrir');
+
+    media.addEventListener('click', () => { window.location.href = link.href; });
+    media.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); link.click(); }
+    });
+  });
+</script>
 </body>
 </html>
